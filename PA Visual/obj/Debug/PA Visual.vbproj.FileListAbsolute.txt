@@ -1,0 +1,13 @@
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.AssemblyReference.cache
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.SuggestedBindingRedirects.cache
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Resources.resources
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.GenerateResource.cache
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.CoreCompileInputs.cache
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.exe.config
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.exe
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.pdb
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.xml
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Form1.resources
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.exe
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.xml
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.pdb
