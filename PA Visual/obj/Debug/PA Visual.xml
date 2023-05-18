@@ -22,12 +22,32 @@ PA Visual
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:PA_Visual.My.Resources.Resources.Admin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PA_Visual.My.Resources.Resources.homeUser">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PA_Visual.My.Resources.Resources.Login">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:PA_Visual.My.Resources.Resources.Login1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PA_Visual.My.Resources.Resources.mainUser">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PA_Visual.My.Resources.Resources.Register">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

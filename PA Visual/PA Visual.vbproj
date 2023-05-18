@@ -86,6 +86,24 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="homeUser.Designer.vb">
+      <DependentUpon>homeUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="homeUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="konfirmasi.Designer.vb">
+      <DependentUpon>konfirmasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="konfirmasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainUser.Designer.vb">
+      <DependentUpon>mainUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -107,6 +125,12 @@
     <Compile Include="Register.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="struk.Designer.vb">
+      <DependentUpon>struk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="struk.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Admin.resx">
@@ -114,6 +138,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homeUser.resx">
+      <DependentUpon>homeUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="konfirmasi.resx">
+      <DependentUpon>konfirmasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainUser.resx">
+      <DependentUpon>mainUser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -123,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="struk.resx">
+      <DependentUpon>struk.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +184,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\konfirmasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\struk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
