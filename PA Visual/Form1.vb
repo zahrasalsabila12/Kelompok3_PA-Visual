@@ -1,6 +1,10 @@
 ﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+
+    End Sub
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Me.Visible = False
-        homeUser.ShowDialog()
+        Dim Register As New Register()
+        Register.Show()
     End Sub
 End Class
