@@ -22,156 +22,156 @@ Partial Class Admin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblID = New System.Windows.Forms.Label()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.lblNama = New System.Windows.Forms.Label()
+        Me.txtNama = New System.Windows.Forms.TextBox()
+        Me.lblMerk = New System.Windows.Forms.Label()
+        Me.txtMerk = New System.Windows.Forms.TextBox()
+        Me.lblJenis = New System.Windows.Forms.Label()
+        Me.cbJenis = New System.Windows.Forms.ComboBox()
+        Me.lblHarga = New System.Windows.Forms.Label()
+        Me.txtHarga = New System.Windows.Forms.TextBox()
+        Me.lblStok = New System.Windows.Forms.Label()
+        Me.txtStok = New System.Windows.Forms.TextBox()
+        Me.lblGambar = New System.Windows.Forms.Label()
         Me.pbAdmin = New System.Windows.Forms.PictureBox()
         Me.dgvAdmin = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.btnTambah = New System.Windows.Forms.Button()
+        Me.btnUbah = New System.Windows.Forms.Button()
+        Me.btnHapus = New System.Windows.Forms.Button()
+        Me.btnCari = New System.Windows.Forms.Button()
+        Me.txtCari = New System.Windows.Forms.TextBox()
         CType(Me.pbAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblID
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(32, 139)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(20, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID"
+        Me.lblID.AutoSize = True
+        Me.lblID.BackColor = System.Drawing.Color.Transparent
+        Me.lblID.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblID.Location = New System.Drawing.Point(32, 139)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(20, 16)
+        Me.lblID.TabIndex = 0
+        Me.lblID.Text = "ID"
         '
-        'TextBox1
+        'txtID
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(35, 158)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(274, 23)
-        Me.TextBox1.TabIndex = 1
+        Me.txtID.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(35, 158)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(274, 23)
+        Me.txtID.TabIndex = 1
         '
-        'Label2
+        'lblNama
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(32, 184)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Nama"
+        Me.lblNama.AutoSize = True
+        Me.lblNama.BackColor = System.Drawing.Color.Transparent
+        Me.lblNama.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNama.Location = New System.Drawing.Point(32, 184)
+        Me.lblNama.Name = "lblNama"
+        Me.lblNama.Size = New System.Drawing.Size(47, 16)
+        Me.lblNama.TabIndex = 2
+        Me.lblNama.Text = "Nama"
         '
-        'TextBox2
+        'txtNama
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(35, 203)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(274, 23)
-        Me.TextBox2.TabIndex = 3
+        Me.txtNama.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNama.Location = New System.Drawing.Point(35, 203)
+        Me.txtNama.Name = "txtNama"
+        Me.txtNama.Size = New System.Drawing.Size(274, 23)
+        Me.txtNama.TabIndex = 3
         '
-        'Label3
+        'lblMerk
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(32, 229)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 16)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Merk"
+        Me.lblMerk.AutoSize = True
+        Me.lblMerk.BackColor = System.Drawing.Color.Transparent
+        Me.lblMerk.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMerk.Location = New System.Drawing.Point(32, 229)
+        Me.lblMerk.Name = "lblMerk"
+        Me.lblMerk.Size = New System.Drawing.Size(40, 16)
+        Me.lblMerk.TabIndex = 4
+        Me.lblMerk.Text = "Merk"
         '
-        'TextBox3
+        'txtMerk
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(35, 248)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(274, 23)
-        Me.TextBox3.TabIndex = 5
+        Me.txtMerk.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMerk.Location = New System.Drawing.Point(35, 248)
+        Me.txtMerk.Name = "txtMerk"
+        Me.txtMerk.Size = New System.Drawing.Size(274, 23)
+        Me.txtMerk.TabIndex = 5
         '
-        'Label4
+        'lblJenis
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(32, 274)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 16)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Jenis"
+        Me.lblJenis.AutoSize = True
+        Me.lblJenis.BackColor = System.Drawing.Color.Transparent
+        Me.lblJenis.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblJenis.Location = New System.Drawing.Point(32, 274)
+        Me.lblJenis.Name = "lblJenis"
+        Me.lblJenis.Size = New System.Drawing.Size(39, 16)
+        Me.lblJenis.TabIndex = 6
+        Me.lblJenis.Text = "Jenis"
         '
-        'ComboBox1
+        'cbJenis
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(35, 293)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(274, 25)
-        Me.ComboBox1.TabIndex = 7
+        Me.cbJenis.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbJenis.FormattingEnabled = True
+        Me.cbJenis.Items.AddRange(New Object() {"Skin Care", "Make Up"})
+        Me.cbJenis.Location = New System.Drawing.Point(35, 293)
+        Me.cbJenis.Name = "cbJenis"
+        Me.cbJenis.Size = New System.Drawing.Size(274, 25)
+        Me.cbJenis.TabIndex = 7
         '
-        'Label5
+        'lblHarga
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(33, 321)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 16)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Harga"
+        Me.lblHarga.AutoSize = True
+        Me.lblHarga.BackColor = System.Drawing.Color.Transparent
+        Me.lblHarga.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHarga.Location = New System.Drawing.Point(33, 321)
+        Me.lblHarga.Name = "lblHarga"
+        Me.lblHarga.Size = New System.Drawing.Size(48, 16)
+        Me.lblHarga.TabIndex = 8
+        Me.lblHarga.Text = "Harga"
         '
-        'TextBox4
+        'txtHarga
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(35, 340)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(274, 23)
-        Me.TextBox4.TabIndex = 9
+        Me.txtHarga.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHarga.Location = New System.Drawing.Point(35, 340)
+        Me.txtHarga.Name = "txtHarga"
+        Me.txtHarga.Size = New System.Drawing.Size(274, 23)
+        Me.txtHarga.TabIndex = 9
         '
-        'Label6
+        'lblStok
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(33, 366)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(34, 16)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Stok"
+        Me.lblStok.AutoSize = True
+        Me.lblStok.BackColor = System.Drawing.Color.Transparent
+        Me.lblStok.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStok.Location = New System.Drawing.Point(33, 366)
+        Me.lblStok.Name = "lblStok"
+        Me.lblStok.Size = New System.Drawing.Size(34, 16)
+        Me.lblStok.TabIndex = 10
+        Me.lblStok.Text = "Stok"
         '
-        'TextBox5
+        'txtStok
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(35, 385)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(274, 23)
-        Me.TextBox5.TabIndex = 11
+        Me.txtStok.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtStok.Location = New System.Drawing.Point(35, 385)
+        Me.txtStok.Name = "txtStok"
+        Me.txtStok.Size = New System.Drawing.Size(274, 23)
+        Me.txtStok.TabIndex = 11
         '
-        'Label7
+        'lblGambar
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(33, 411)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 16)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Gambar"
+        Me.lblGambar.AutoSize = True
+        Me.lblGambar.BackColor = System.Drawing.Color.Transparent
+        Me.lblGambar.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGambar.Location = New System.Drawing.Point(33, 411)
+        Me.lblGambar.Name = "lblGambar"
+        Me.lblGambar.Size = New System.Drawing.Size(62, 16)
+        Me.lblGambar.TabIndex = 12
+        Me.lblGambar.Text = "Gambar"
         '
         'pbAdmin
         '
@@ -193,63 +193,65 @@ Partial Class Admin
         Me.dgvAdmin.Size = New System.Drawing.Size(501, 311)
         Me.dgvAdmin.TabIndex = 14
         '
-        'Button1
+        'btnTambah
         '
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(396, 456)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Tambah"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnTambah.BackColor = System.Drawing.Color.LimeGreen
+        Me.btnTambah.FlatAppearance.BorderSize = 0
+        Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTambah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTambah.Location = New System.Drawing.Point(396, 456)
+        Me.btnTambah.Name = "btnTambah"
+        Me.btnTambah.Size = New System.Drawing.Size(75, 23)
+        Me.btnTambah.TabIndex = 15
+        Me.btnTambah.Text = "Tambah"
+        Me.btnTambah.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnUbah
         '
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(477, 456)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Ubah"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnUbah.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnUbah.FlatAppearance.BorderSize = 0
+        Me.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUbah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUbah.Location = New System.Drawing.Point(477, 456)
+        Me.btnUbah.Name = "btnUbah"
+        Me.btnUbah.Size = New System.Drawing.Size(75, 23)
+        Me.btnUbah.TabIndex = 16
+        Me.btnUbah.Text = "Ubah"
+        Me.btnUbah.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnHapus
         '
-        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(558, 456)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "Hapus"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnHapus.BackColor = System.Drawing.Color.Salmon
+        Me.btnHapus.FlatAppearance.BorderSize = 0
+        Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHapus.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHapus.Location = New System.Drawing.Point(558, 456)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(75, 23)
+        Me.btnHapus.TabIndex = 17
+        Me.btnHapus.Text = "Hapus"
+        Me.btnHapus.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnCari
         '
-        Me.Button4.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(396, 110)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 18
-        Me.Button4.Text = "Cari"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnCari.BackColor = System.Drawing.Color.Peru
+        Me.btnCari.FlatAppearance.BorderSize = 0
+        Me.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCari.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCari.Location = New System.Drawing.Point(396, 110)
+        Me.btnCari.Name = "btnCari"
+        Me.btnCari.Size = New System.Drawing.Size(75, 23)
+        Me.btnCari.TabIndex = 18
+        Me.btnCari.Text = "Cari"
+        Me.btnCari.UseVisualStyleBackColor = False
         '
-        'Button5
+        'txtCari
         '
-        Me.Button5.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(36, 549)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 19
-        Me.Button5.Text = "Upload"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(477, 110)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(230, 23)
-        Me.TextBox6.TabIndex = 20
+        Me.txtCari.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCari.Location = New System.Drawing.Point(477, 110)
+        Me.txtCari.Name = "txtCari"
+        Me.txtCari.Size = New System.Drawing.Size(230, 23)
+        Me.txtCari.TabIndex = 20
         '
         'Admin
         '
@@ -257,28 +259,27 @@ Partial Class Admin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(930, 594)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(936, 580)
+        Me.Controls.Add(Me.txtCari)
+        Me.Controls.Add(Me.btnCari)
+        Me.Controls.Add(Me.btnHapus)
+        Me.Controls.Add(Me.btnUbah)
+        Me.Controls.Add(Me.btnTambah)
         Me.Controls.Add(Me.dgvAdmin)
         Me.Controls.Add(Me.pbAdmin)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblGambar)
+        Me.Controls.Add(Me.txtStok)
+        Me.Controls.Add(Me.lblStok)
+        Me.Controls.Add(Me.txtHarga)
+        Me.Controls.Add(Me.lblHarga)
+        Me.Controls.Add(Me.cbJenis)
+        Me.Controls.Add(Me.lblJenis)
+        Me.Controls.Add(Me.txtMerk)
+        Me.Controls.Add(Me.lblMerk)
+        Me.Controls.Add(Me.txtNama)
+        Me.Controls.Add(Me.lblNama)
+        Me.Controls.Add(Me.txtID)
+        Me.Controls.Add(Me.lblID)
         Me.DoubleBuffered = True
         Me.Name = "Admin"
         Me.Text = "Admin"
@@ -289,25 +290,24 @@ Partial Class Admin
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblID As Label
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents lblNama As Label
+    Friend WithEvents txtNama As TextBox
+    Friend WithEvents lblMerk As Label
+    Friend WithEvents txtMerk As TextBox
+    Friend WithEvents lblJenis As Label
+    Friend WithEvents cbJenis As ComboBox
+    Friend WithEvents lblHarga As Label
+    Friend WithEvents txtHarga As TextBox
+    Friend WithEvents lblStok As Label
+    Friend WithEvents txtStok As TextBox
+    Friend WithEvents lblGambar As Label
     Friend WithEvents pbAdmin As PictureBox
     Friend WithEvents dgvAdmin As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents btnTambah As Button
+    Friend WithEvents btnUbah As Button
+    Friend WithEvents btnHapus As Button
+    Friend WithEvents btnCari As Button
+    Friend WithEvents txtCari As TextBox
 End Class

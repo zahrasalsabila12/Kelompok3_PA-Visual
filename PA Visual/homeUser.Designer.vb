@@ -31,7 +31,7 @@ Partial Class homeUser
         Me.btnNext.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNext.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNext.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnNext.Location = New System.Drawing.Point(446, 364)
+        Me.btnNext.Location = New System.Drawing.Point(511, 418)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(320, 46)
         Me.btnNext.TabIndex = 0
@@ -44,7 +44,7 @@ Partial Class homeUser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.homeUser
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(889, 542)
         Me.Controls.Add(Me.btnNext)
         Me.DoubleBuffered = True
         Me.Name = "homeUser"

@@ -32,6 +32,11 @@ PA Visual
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PA_Visual.My.Resources.Resources.konfirmasi">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PA_Visual.My.Resources.Resources.Login">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -48,6 +53,11 @@ PA Visual
 </summary>
 </member>
 <member name="P:PA_Visual.My.Resources.Resources.Register">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PA_Visual.My.Resources.Resources.struk">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

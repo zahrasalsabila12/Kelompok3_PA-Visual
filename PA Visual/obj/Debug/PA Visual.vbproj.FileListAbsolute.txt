@@ -15,3 +15,7 @@ D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Admin.resour
 D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.homeUser.resources
 D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Register.resources
 D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.mainUser.resources
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\mysql.data.dll
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.konfirmasi.resources
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.struk.resources
+D:\anu\Pem.Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.CopyComplete

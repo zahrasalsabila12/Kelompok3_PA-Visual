@@ -22,20 +22,21 @@ Partial Class Register
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNewUser = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtNewPass = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.btnKembali = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtNewUser
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Yu Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(264, 163)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(281, 36)
-        Me.TextBox1.TabIndex = 1
+        Me.txtNewUser.Font = New System.Drawing.Font("Yu Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNewUser.Location = New System.Drawing.Point(309, 181)
+        Me.txtNewUser.Name = "txtNewUser"
+        Me.txtNewUser.Size = New System.Drawing.Size(281, 36)
+        Me.txtNewUser.TabIndex = 1
         '
         'Label1
         '
@@ -44,19 +45,19 @@ Partial Class Register
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.RosyBrown
-        Me.Label1.Location = New System.Drawing.Point(260, 140)
+        Me.Label1.Location = New System.Drawing.Point(305, 158)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 20)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "username baru"
         '
-        'TextBox2
+        'txtNewPass
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Yu Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(264, 243)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(281, 36)
-        Me.TextBox2.TabIndex = 4
+        Me.txtNewPass.Font = New System.Drawing.Font("Yu Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNewPass.Location = New System.Drawing.Point(309, 261)
+        Me.txtNewPass.Name = "txtNewPass"
+        Me.txtNewPass.Size = New System.Drawing.Size(281, 36)
+        Me.txtNewPass.TabIndex = 4
         '
         'Label2
         '
@@ -65,23 +66,35 @@ Partial Class Register
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.RosyBrown
-        Me.Label2.Location = New System.Drawing.Point(260, 220)
+        Me.Label2.Location = New System.Drawing.Point(305, 238)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 20)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "password baru"
         '
-        'Button1
+        'btnCreate
         '
-        Me.Button1.BackColor = System.Drawing.Color.RosyBrown
-        Me.Button1.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button1.Location = New System.Drawing.Point(324, 308)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(170, 49)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "CREATE"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCreate.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnCreate.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCreate.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnCreate.Location = New System.Drawing.Point(486, 342)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(170, 49)
+        Me.btnCreate.TabIndex = 6
+        Me.btnCreate.Text = "CREATE"
+        Me.btnCreate.UseVisualStyleBackColor = False
+        '
+        'btnKembali
+        '
+        Me.btnKembali.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnKembali.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKembali.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnKembali.Location = New System.Drawing.Point(249, 342)
+        Me.btnKembali.Name = "btnKembali"
+        Me.btnKembali.Size = New System.Drawing.Size(170, 49)
+        Me.btnKembali.TabIndex = 7
+        Me.btnKembali.Text = "KEMBALI"
+        Me.btnKembali.UseVisualStyleBackColor = False
         '
         'Register
         '
@@ -89,12 +102,13 @@ Partial Class Register
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.Register
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(889, 512)
+        Me.Controls.Add(Me.btnKembali)
+        Me.Controls.Add(Me.btnCreate)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtNewPass)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNewUser)
         Me.DoubleBuffered = True
         Me.Name = "Register"
         Me.Text = "Register"
@@ -103,9 +117,10 @@ Partial Class Register
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNewUser As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtNewPass As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCreate As Button
+    Friend WithEvents btnKembali As Button
 End Class
