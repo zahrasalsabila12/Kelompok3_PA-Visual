@@ -56,7 +56,7 @@ Partial Class mainUser
         Me.Label1.Location = New System.Drawing.Point(24, 204)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 18)
+        Me.Label1.Size = New System.Drawing.Size(78, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "No. Pesanan"
         '
@@ -67,7 +67,7 @@ Partial Class mainUser
         Me.TextBox1.Location = New System.Drawing.Point(152, 196)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(276, 32)
+        Me.TextBox1.Size = New System.Drawing.Size(276, 27)
         Me.TextBox1.TabIndex = 1
         '
         'GroupBox1
@@ -190,7 +190,7 @@ Partial Class mainUser
         Me.TextBox2.Location = New System.Drawing.Point(754, 168)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(276, 32)
+        Me.TextBox2.Size = New System.Drawing.Size(276, 27)
         Me.TextBox2.TabIndex = 4
         '
         'Label2
@@ -202,7 +202,7 @@ Partial Class mainUser
         Me.Label2.Location = New System.Drawing.Point(751, 146)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 18)
+        Me.Label2.Size = New System.Drawing.Size(87, 15)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Total Pesanan"
         '
@@ -231,11 +231,11 @@ Partial Class mainUser
         '
         'mainUser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.mainUser
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1614, 981)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
