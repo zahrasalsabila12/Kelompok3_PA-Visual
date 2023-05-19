@@ -1,13 +1,9 @@
-﻿Public Class Admin
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+﻿Imports MySql.Data.MySqlClient
 
-    End Sub
+Public Class Admin
+    Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call Connect()
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
 End Class

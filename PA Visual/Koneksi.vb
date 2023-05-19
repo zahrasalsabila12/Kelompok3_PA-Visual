@@ -7,9 +7,9 @@ Module Koneksi
     Public DS As DataSet
     Public STR As String
 
-    Sub Koneksi()
+    Sub Connect()
         Try
-            Dim STR As String = "server=localhost;userid=root;password=dbblossom"
+            Dim STR As String = "server=localhost;userid=root;password=;database=dbblossom"
             CONN = New MySqlConnection(STR)
             If CONN.State = ConnectionState.Closed Then
                 CONN.Open()
