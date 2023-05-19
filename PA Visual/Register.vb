@@ -29,6 +29,4 @@ Public Class Register
         Me.Visible = False
         Form1.ShowDialog()
     End Sub
-
-
 End Class

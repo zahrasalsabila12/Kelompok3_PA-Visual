@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Windows
 Imports MySql.Data.MySqlClient
 
 Public Class Form1
@@ -8,6 +9,10 @@ Public Class Form1
 
         If username = "" Or password = "" Then
             MessageBox.Show("Mohon isi semua field.")
+
+        ElseIf txtUser.Text = "admin" And txtPass.Text = "admin123" Then
+            Me.Visible = False
+            Admin.ShowDialog()
         Else
             CMD = New MySqlCommand("Select * From tbakun where usename= @username and password= @password", CONN)
             CMD.Parameters.AddWithValue("username", username)
