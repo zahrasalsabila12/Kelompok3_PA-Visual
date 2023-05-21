@@ -1,4 +1,7 @@
-﻿Imports MySql.Data.MySqlClient
+Imports System.Windows
+Imports MySql.Data.MySqlClient
+﻿Imports System.Data.OleDb
+
 Public Class Form1
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtUser.Text.Trim()
@@ -6,6 +9,10 @@ Public Class Form1
 
         If username = "" Or password = "" Then
             MessageBox.Show("Mohon isi semua field.")
+
+        ElseIf txtUser.Text = "admin" And txtPass.Text = "admin123" Then
+            Me.Visible = False
+            Admin.ShowDialog()
         Else
             CMD = New MySqlCommand("Select * From tbakun where usename= @username and password= @password", CONN)
             CMD.Parameters.AddWithValue("username", username)
