@@ -26,17 +26,21 @@ Partial Class konfirmasi
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.dgvKeranjang = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.dgvKeranjang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.SeaShell
+        Me.GroupBox1.Controls.Add(Me.dgvKeranjang)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.SaddleBrown
         Me.GroupBox1.Location = New System.Drawing.Point(213, 65)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(494, 170)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -60,7 +64,7 @@ Partial Class konfirmasi
         Me.Button1.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.Button1.Location = New System.Drawing.Point(281, 273)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(128, 40)
         Me.Button1.TabIndex = 4
@@ -73,12 +77,22 @@ Partial Class konfirmasi
         Me.Button2.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.Button2.Location = New System.Drawing.Point(503, 273)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(128, 40)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "Checkout"
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'dgvKeranjang
+        '
+        Me.dgvKeranjang.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.dgvKeranjang.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvKeranjang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvKeranjang.Location = New System.Drawing.Point(6, 19)
+        Me.dgvKeranjang.Name = "dgvKeranjang"
+        Me.dgvKeranjang.Size = New System.Drawing.Size(483, 151)
+        Me.dgvKeranjang.TabIndex = 0
         '
         'konfirmasi
         '
@@ -93,9 +107,11 @@ Partial Class konfirmasi
         Me.Controls.Add(Me.GroupBox1)
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "konfirmasi"
         Me.Text = "konfirmasi"
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.dgvKeranjang, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,4 +121,5 @@ Partial Class konfirmasi
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents dgvKeranjang As DataGridView
 End Class

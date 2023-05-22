@@ -31,10 +31,10 @@ Partial Class struk
         Me.Button2.BackColor = System.Drawing.Color.IndianRed
         Me.Button2.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button2.Location = New System.Drawing.Point(360, 315)
+        Me.Button2.Location = New System.Drawing.Point(709, 658)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(128, 40)
+        Me.Button2.Size = New System.Drawing.Size(290, 58)
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "Download Gambar"
         Me.Button2.UseVisualStyleBackColor = False
@@ -44,10 +44,10 @@ Partial Class struk
         Me.Button1.BackColor = System.Drawing.Color.RosyBrown
         Me.Button1.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button1.Location = New System.Drawing.Point(138, 315)
+        Me.Button1.Location = New System.Drawing.Point(323, 658)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(128, 40)
+        Me.Button1.Size = New System.Drawing.Size(290, 58)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Kembali"
         Me.Button1.UseVisualStyleBackColor = False
@@ -58,11 +58,11 @@ Partial Class struk
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.struk
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(1183, 739)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "struk"
         Me.Text = "struk"
         Me.ResumeLayout(False)
