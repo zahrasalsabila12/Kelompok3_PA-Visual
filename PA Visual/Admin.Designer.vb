@@ -45,6 +45,20 @@ Partial Class Admin
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.dgvMakeUp = New System.Windows.Forms.DataGridView()
         Me.dgvSkinCare = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.pbAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -271,6 +285,7 @@ Partial Class Admin
         Me.dgvMakeUp.BackgroundColor = System.Drawing.SystemColors.Info
         Me.dgvMakeUp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvMakeUp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMakeUp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
         Me.dgvMakeUp.Location = New System.Drawing.Point(376, 277)
         Me.dgvMakeUp.Name = "dgvMakeUp"
         Me.dgvMakeUp.ReadOnly = True
@@ -282,11 +297,99 @@ Partial Class Admin
         Me.dgvSkinCare.BackgroundColor = System.Drawing.SystemColors.Info
         Me.dgvSkinCare.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvSkinCare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSkinCare.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.dgvSkinCare.Location = New System.Drawing.Point(376, 52)
         Me.dgvSkinCare.Name = "dgvSkinCare"
         Me.dgvSkinCare.ReadOnly = True
         Me.dgvSkinCare.Size = New System.Drawing.Size(538, 219)
         Me.dgvSkinCare.TabIndex = 23
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "NAMA"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "MERK"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "JENIS"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "HARGA"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "STOK"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column7.HeaderText = "GAMBAR"
+        Me.Column7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "ID"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "NAMA"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "MERK"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "JENIS"
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "HARGA"
+        Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
+        '
+        'Column13
+        '
+        Me.Column13.HeaderText = "STOK"
+        Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
+        '
+        'Column14
+        '
+        Me.Column14.HeaderText = "GAMBAR"
+        Me.Column14.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
+        Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
         '
         'Admin
         '
@@ -351,4 +454,18 @@ Partial Class Admin
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents dgvMakeUp As DataGridView
     Friend WithEvents dgvSkinCare As DataGridView
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As DataGridViewImageColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewImageColumn
 End Class

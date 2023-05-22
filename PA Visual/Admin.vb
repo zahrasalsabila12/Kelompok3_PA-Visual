@@ -3,31 +3,13 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
 
 Public Class Admin
+    Dim arrImg() As Byte
+
     Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Connect()
         Call DisplaySkincare()
+        Call DisplayMakeup()
         Call Clean()
-
-        dgvSkinCare.ColumnCount = 7
-        dgvSkinCare.Columns(0).HeaderText = "ID"
-        dgvSkinCare.Columns(1).HeaderText = "NAMA"
-        dgvSkinCare.Columns(2).HeaderText = "MERK"
-        dgvSkinCare.Columns(3).HeaderText = "JENIS"
-        dgvSkinCare.Columns(4).HeaderText = "HARGA"
-        dgvSkinCare.Columns(5).HeaderText = "STOK"
-        Dim colGambar As New DataGridViewImageColumn
-        colGambar.HeaderText = "GAMBAR"
-        colGambar.ImageLayout = DataGridViewImageCellLayout.Stretch
-        dgvSkinCare.Columns.Insert(6, colGambar)
-
-        dgvMakeUp.Columns(0).HeaderText = "ID"
-        dgvMakeUp.Columns(1).HeaderText = "NAMA"
-        dgvMakeUp.Columns(2).HeaderText = "MERK"
-        dgvMakeUp.Columns(3).HeaderText = "JENIS"
-        dgvMakeUp.Columns(4).HeaderText = "HARGA"
-        dgvMakeUp.Columns(5).HeaderText = "STOK"
-        dgvMakeUp.Columns(6).HeaderText = "GAMBAR"
-
         dgvSkinCare.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         dgvMakeUp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
     End Sub
@@ -43,24 +25,69 @@ Public Class Admin
     End Sub
     'melihat data skin care
     Sub DisplaySkincare()
-        DA = New MySqlDataAdapter("Select * From tbskincare ORDER BY 'id' ASC", CONN)
-        DS = New DataSet
-        DS.Clear()
-        DA.Fill(DS, "skincare")
-        dgvMakeUp.DataSource = DS.Tables("skincare")
-        dgvSkinCare.RowTemplate.Height = 50
-        dgvMakeUp.Refresh()
+        DA = New MySqlDataAdapter("Select id,nama,merk,jenis,harga,stok,gambar From tbskincare ORDER BY 'id' ASC", CONN)
+        Dim dt As New DataTable
+        DA.Fill(dt)
+        dgvSkinCare.Rows.Clear()
+        For i = 0 To dt.Rows.Count - 1
+            dgvSkinCare.Rows.Add()
+            Dim pic As Image = Image.FromStream(getImageSkincare(dt.Rows(i).Item(0).ToString))
+            dgvSkinCare.Rows(i).Cells(0).Value = dt.Rows(i).Item(0).ToString
+            dgvSkinCare.Rows(i).Cells(1).Value = dt.Rows(i).Item(1).ToString
+            dgvSkinCare.Rows(i).Cells(2).Value = dt.Rows(i).Item(2).ToString
+            dgvSkinCare.Rows(i).Cells(3).Value = dt.Rows(i).Item(3).ToString
+            dgvSkinCare.Rows(i).Cells(4).Value = dt.Rows(i).Item(4).ToString
+            dgvSkinCare.Rows(i).Cells(5).Value = dt.Rows(i).Item(5).ToString
+            dgvSkinCare.Rows(i).Cells(6).Value = pic
+        Next
+        dgvSkinCare.Refresh()
     End Sub
     'melihat data make up
     Sub DisplayMakeup()
-        DA = New MySqlDataAdapter("Select * From tbmakeup ORDER BY 'id' ASC", CONN)
-        DS = New DataSet
-        DS.Clear()
-        DA.Fill(DS, "makeup")
-        dgvMakeUp.DataSource = DS.Tables("makeup")
-        dgvMakeUp.RowTemplate.Height = 50
+        DA = New MySqlDataAdapter("Select id,nama,merk,jenis,harga,stok,gambar From tbmakeup ORDER BY 'id' ASC", CONN)
+        Dim dt As New DataTable
+        DA.Fill(dt)
+        dgvMakeUp.Rows.Clear()
+        For i = 0 To dt.Rows.Count - 1
+            dgvSkinCare.Rows.Add()
+            Dim pic As Image = Image.FromStream(getImageMakeup(dt.Rows(i).Item(0).ToString))
+            dgvMakeUp.Rows(i).Cells(0).Value = dt.Rows(i).Item(0).ToString
+            dgvMakeUp.Rows(i).Cells(1).Value = dt.Rows(i).Item(1).ToString
+            dgvMakeUp.Rows(i).Cells(2).Value = dt.Rows(i).Item(2).ToString
+            dgvMakeUp.Rows(i).Cells(3).Value = dt.Rows(i).Item(3).ToString
+            dgvMakeUp.Rows(i).Cells(4).Value = dt.Rows(i).Item(4).ToString
+            dgvMakeUp.Rows(i).Cells(5).Value = dt.Rows(i).Item(5).ToString
+            dgvMakeUp.Rows(i).Cells(6).Value = pic
+        Next
         dgvMakeUp.Refresh()
     End Sub
+
+    Private Function getImageSkincare(ByVal id As String) As System.IO.MemoryStream
+        CMD = New MySqlCommand("Select gambar From tbskincare where id = @id", CONN)
+        CMD.Parameters.AddWithValue("@id", id)
+        RD = CMD.ExecuteReader
+        RD.Read()
+        Dim dtImage() As Byte = RD.Item("gambar")
+        MS = New System.IO.MemoryStream(dtImage)
+        CMD.Dispose()
+        RD.Close()
+
+        Return MS
+    End Function
+
+    Private Function getImageMakeup(ByVal id As String) As System.IO.MemoryStream
+        CMD = New MySqlCommand("Select gambar From tbmakeup where id = @id", CONN)
+        CMD.Parameters.AddWithValue("@id", id)
+        RD = CMD.ExecuteReader
+        RD.Read()
+        Dim dtImage() As Byte = RD.Item("gambar")
+        MS = New System.IO.MemoryStream(dtImage)
+        CMD.Dispose()
+        RD.Close()
+
+        Return MS
+    End Function
+
     'menambahkan data
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         If (txtID.Text = "") Then
@@ -93,26 +120,29 @@ Public Class Admin
                 RD = CMD.ExecuteReader
                 RD.Read()
                 If Not RD.HasRows Then
-                    RD.Close()
-                    Dim dataGambar As Byte() = Nothing
-                    Dim simpan As String = "insert into tbskincare(id, nama, merk, jenis, harga, stok, gambar) values (@id, @nama, @merk, @jenis, @harga, @stok, @image)"
-                    CMD = New MySqlCommand(simpan, CONN)
-                    CMD.Parameters.AddWithValue("id", txtID.Text)
-                    CMD.Parameters.AddWithValue("nama", txtNama.Text)
-                    CMD.Parameters.AddWithValue("merk", txtMerk.Text)
-                    CMD.Parameters.AddWithValue("jenis", cbJenis.Text)
-                    CMD.Parameters.AddWithValue("harga", txtHarga.Text)
-                    CMD.Parameters.AddWithValue("stok", txtStok.Text)
+                    Try
+                        RD.Close()
+                        MS = New System.IO.MemoryStream()
+                        pbAdmin.Image.Save(MS, System.Drawing.Imaging.ImageFormat.Jpeg)
+                        arrImg = MS.GetBuffer
+                        Dim fileSize As UInt32
+                        fileSize = MS.Length
+                        MS.Close()
 
-                    MS = New MemoryStream
-                    Dim gambar As New Bitmap(pbAdmin.Image)
-                    gambar.Save(MS, System.Drawing.Imaging.ImageFormat.Jpeg)
-                    Dim dt As Byte() = MS.GetBuffer
-                    Dim img As New MySqlParameter("gambar", MySqlDbType.Blob)
-                    img.Value = dt
-                    CMD.Parameters.Add(img)
-                    CMD.ExecuteNonQuery()
-                    MsgBox("Data berhasil disimpan!", MsgBoxStyle.Information, "Info")
+                        Dim simpan As String = "insert into tbskincare(id, nama, merk, jenis, harga, stok, gambar) values (@id, @nama, @merk, @jenis, @harga, @stok, @image)"
+                        CMD = New MySqlCommand(simpan, CONN)
+                        CMD.Parameters.AddWithValue("@id", txtID.Text)
+                        CMD.Parameters.AddWithValue("@nama", txtNama.Text)
+                        CMD.Parameters.AddWithValue("@merk", txtMerk.Text)
+                        CMD.Parameters.AddWithValue("@jenis", cbJenis.Text)
+                        CMD.Parameters.AddWithValue("@harga", txtHarga.Text)
+                        CMD.Parameters.AddWithValue("@stok", txtStok.Text)
+                        CMD.Parameters.AddWithValue("@gambar", arrImg)
+                        CMD.ExecuteNonQuery()
+                        MsgBox("Data berhasil disimpan!", MsgBoxStyle.Information, "Info")
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message)
+                    End Try
                 Else
                     MsgBox("Terjasi kesalahan", MsgBoxStyle.Exclamation)
                 End If
