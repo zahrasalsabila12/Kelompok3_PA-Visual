@@ -19,8 +19,8 @@ Public Class mainUser
         DS = New DataSet
         DS.Clear()
         DA.Fill(DS, "tbskincare")
-        dgvDaftarMakeup.DataSource = DS.Tables("tbskincare")
-        dgvDaftarMakeup.Refresh()
+        dgvDaftarSkincare.DataSource = DS.Tables("tbskincare")
+        dgvDaftarSkincare.Refresh()
     End Sub
 
     Private Sub Penomoran(ByRef data As DataGridView)
@@ -36,25 +36,41 @@ Public Class mainUser
     Private Sub mainUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Connect()
         Call displayMakeup()
+        dgvDaftarMakeup.Columns(0).Width = 50
+        dgvDaftarMakeup.Columns(1).Width = 120
+        dgvDaftarMakeup.Columns(2).Width = 120
+        dgvDaftarMakeup.Columns(3).Width = 100
+        dgvDaftarMakeup.Columns(4).Width = 100
+        dgvDaftarMakeup.Columns(5).Width = 80
         dgvDaftarMakeup.Columns(0).HeaderText = "ID"
         dgvDaftarMakeup.Columns(1).HeaderText = "NAMA"
         dgvDaftarMakeup.Columns(2).HeaderText = "MERK"
         dgvDaftarMakeup.Columns(3).HeaderText = "JENIS"
         dgvDaftarMakeup.Columns(4).HeaderText = "HARGA"
         dgvDaftarMakeup.Columns(5).HeaderText = "STOK"
-        dgvDaftarMakeup.Columns(6).HeaderText = "FOTO"
-        dgvDaftarMakeup.Columns(6).Visible = False
 
         Call displaySkincare()
+        dgvDaftarSkincare.Columns(0).Width = 50
+        dgvDaftarSkincare.Columns(1).Width = 120
+        dgvDaftarSkincare.Columns(2).Width = 120
+        dgvDaftarSkincare.Columns(3).Width = 100
+        dgvDaftarSkincare.Columns(4).Width = 100
+        dgvDaftarSkincare.Columns(5).Width = 80
         dgvDaftarSkincare.Columns(0).HeaderText = "ID"
         dgvDaftarSkincare.Columns(1).HeaderText = "NAMA"
         dgvDaftarSkincare.Columns(2).HeaderText = "MERK"
         dgvDaftarSkincare.Columns(3).HeaderText = "JENIS"
         dgvDaftarSkincare.Columns(4).HeaderText = "HARGA"
         dgvDaftarSkincare.Columns(5).HeaderText = "STOK"
-        dgvDaftarSkincare.Columns(6).HeaderText = "GAMBAR"
-        dgvDaftarSkincare.Columns(6).Visible = False
 
+        dgvKeranjang.ColumnCount = 7
+        dgvKeranjang.Columns(0).Width = 50
+        dgvKeranjang.Columns(1).Width = 140
+        dgvKeranjang.Columns(2).Width = 140
+        dgvKeranjang.Columns(3).Width = 110
+        dgvKeranjang.Columns(4).Width = 100
+        dgvKeranjang.Columns(5).Width = 110
+        dgvKeranjang.Columns(6).Width = 115
         dgvKeranjang.Columns(0).HeaderText = "NO"
         dgvKeranjang.Columns(1).HeaderText = "NAMA"
         dgvKeranjang.Columns(2).HeaderText = "MERK"
@@ -62,8 +78,6 @@ Public Class mainUser
         dgvKeranjang.Columns(4).HeaderText = "HARGA SATUAN"
         dgvKeranjang.Columns(5).HeaderText = "JUMLAH BARANG"
         dgvKeranjang.Columns(6).HeaderText = "TOTAL"
-        dgvKeranjang.Columns(7).HeaderText = "GAMBAR"
-        dgvKeranjang.Columns(7).Visible = False
         Penomoran(dgvKeranjang)
     End Sub
 
@@ -72,7 +86,7 @@ Public Class mainUser
             Dim totalPembayaran As Double = 0
             Dim indeks As Integer
             While (indeks <= dgvKeranjang.Rows.Count - 1)
-                totalPembayaran = totalPembayaran + dgvKeranjang.Rows(indeks).Cells(4).Value
+                totalPembayaran = totalPembayaran + dgvKeranjang.Rows(indeks).Cells(6).Value
                 indeks = indeks + 1
             End While
             txtTotalPesanan.Text = totalPembayaran
@@ -81,29 +95,35 @@ Public Class mainUser
         End If
     End Sub
 
+    Private Sub dgvKeranjang_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles dgvKeranjang.CurrentCellDirtyStateChanged
+        Try
+            If dgvKeranjang.CurrentRow.Cells(5).Value = 0 Then
+                dgvKeranjang.Rows.RemoveAt(dgvKeranjang.CurrentRow.Index)
+                Penomoran(dgvKeranjang)
+                UpdateTotalPembayaran()
+            End If
+            Dim Total As Integer = Val(dgvKeranjang.CurrentRow.Cells(5).Value) * Val(dgvKeranjang.CurrentRow.Cells(4).Value)
+            dgvKeranjang.CurrentRow.Cells(6).Value = Total
+            UpdateTotalPembayaran()
+        Catch ex As Exception
+            MessageBox.Show("Masukkan Angka!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            dgvKeranjang.CurrentRow.Cells(5).Value = 1
+            Dim Total As Integer = Val(dgvKeranjang.CurrentRow.Cells(5).Value) * Val(dgvKeranjang.CurrentRow.Cells(4).Value)
+            dgvKeranjang.CurrentRow.Cells(6).Value = Total
+        End Try
+    End Sub
+
     Private Sub btnTambahSkincare_Click(sender As Object, e As EventArgs) Handles btnTambahSkincare.Click
-        Dim jumlahCellsTerpilih As Integer = dgvDaftarSkincare.GetCellCount(DataGridViewElementStates.Selected)
-        If jumlahCellsTerpilih > 0 Then
+        Dim jumlahRowsTerpilih As Integer = dgvDaftarSkincare.SelectedRows.Count
+        If jumlahRowsTerpilih > 0 Then
             Dim i As Integer
-            For i = 0 To jumlahCellsTerpilih - 1
+            For i = 0 To jumlahRowsTerpilih - 1
                 Dim indeks As Integer = dgvDaftarSkincare.SelectedCells(i).RowIndex
                 Dim namaSkincare As String = dgvDaftarSkincare.Rows(indeks).Cells(1).Value
-                Dim hargaSatuan As String = dgvDaftarSkincare.Rows(indeks).Cells(2).Value
-                If dgvKeranjang IsNot Nothing Then
-                    Dim j As Integer = 0
-                    Dim sama As Boolean = False
-                    While (j <= (dgvKeranjang.Rows.Count - 1))
-                        If dgvKeranjang.Rows(j).Cells(1).Value.Equals(namaSkincare) Then
-                            sama = True
-                            MessageBox.Show("Kosmetik Sudah Dipesan, Silahkan Ganti Jumlah Kosmetik Pada Baris Jumlah!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                            Exit While
-                        End If
-                        j = j + 1
-                    End While
-                    If sama = False Then
-                        dgvKeranjang.Rows.Add("", namaSkincare, "1", hargaSatuan, hargaSatuan)
-                    End If
-                End If
+                Dim merkSkincare As String = dgvDaftarSkincare.Rows(indeks).Cells(2).Value
+                Dim jenisSkincare As String = dgvDaftarSkincare.Rows(indeks).Cells(3).Value
+                Dim hargaSatuan As String = dgvDaftarSkincare.Rows(indeks).Cells(4).Value
+                dgvKeranjang.Rows.Add("", namaSkincare, merkSkincare, jenisSkincare, hargaSatuan, "1", hargaSatuan)
             Next
         Else
             MessageBox.Show("Silahkan Pilih Menu Yang Tersedia!!!", "Warning")
@@ -113,28 +133,16 @@ Public Class mainUser
     End Sub
 
     Private Sub btnTambahMakeup_Click(sender As Object, e As EventArgs) Handles btnTambahMakeup.Click
-        Dim jumlahCellsTerpilih As Integer = dgvDaftarMakeup.GetCellCount(DataGridViewElementStates.Selected)
-        If jumlahCellsTerpilih > 0 Then
+        Dim jumlahRowsTerpilih As Integer = dgvDaftarMakeup.SelectedRows.Count
+        If jumlahRowsTerpilih > 0 Then
             Dim i As Integer
-            For i = 0 To jumlahCellsTerpilih - 1
+            For i = 0 To jumlahRowsTerpilih - 1
                 Dim indeks As Integer = dgvDaftarMakeup.SelectedCells(i).RowIndex
                 Dim namaMakeup As String = dgvDaftarMakeup.Rows(indeks).Cells(1).Value
-                Dim hargaSatuan As String = dgvDaftarMakeup.Rows(indeks).Cells(2).Value
-                If dgvKeranjang IsNot Nothing Then
-                    Dim j As Integer = 0
-                    Dim sama As Boolean = False
-                    While (j <= (dgvKeranjang.Rows.Count - 1))
-                        If dgvKeranjang.Rows(j).Cells(1).Value.Equals(namaMakeup) Then
-                            sama = True
-                            MessageBox.Show("Kosmetik Sudah Dipesan, Silahkan Ganti Jumlah Kosmetik Pada Baris Jumlah!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                            Exit While
-                        End If
-                        j = j + 1
-                    End While
-                    If sama = False Then
-                        dgvKeranjang.Rows.Add("", namaMakeup, "1", hargaSatuan, hargaSatuan)
-                    End If
-                End If
+                Dim merkMakeup As String = dgvDaftarMakeup.Rows(indeks).Cells(2).Value
+                Dim jenisMakeup As String = dgvDaftarMakeup.Rows(indeks).Cells(3).Value
+                Dim hargaSatuan As String = dgvDaftarMakeup.Rows(indeks).Cells(4).Value
+                dgvKeranjang.Rows.Add("", namaMakeup, merkMakeup, jenisMakeup, hargaSatuan, "1", hargaSatuan)
             Next
         Else
             MessageBox.Show("Silahkan Pilih Menu Yang Tersedia!!!", "Warning")
@@ -142,4 +150,10 @@ Public Class mainUser
         Penomoran(dgvKeranjang)
         UpdateTotalPembayaran()
     End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Me.Hide()
+        Form1.ShowDialog()
+    End Sub
+
 End Class
