@@ -45,7 +45,11 @@ Public Class Admin
         DA.Fill(data)
         dgvMakeUp.Rows.Clear()
         For i = 0 To data.Rows.Count - 1
+<<<<<<< HEAD
+            dgvMakeUp.Rows.Add()
+=======
             dgvSkinCare.Rows.Add()
+>>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b
             dgvMakeUp.Rows(i).Cells(0).Value = data.Rows(i).Item(0).ToString
             dgvMakeUp.Rows(i).Cells(1).Value = data.Rows(i).Item(1).ToString
             dgvMakeUp.Rows(i).Cells(2).Value = data.Rows(i).Item(2).ToString
