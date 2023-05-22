@@ -34,14 +34,11 @@ Partial Class Admin
         Me.txtHarga = New System.Windows.Forms.TextBox()
         Me.lblStok = New System.Windows.Forms.Label()
         Me.txtStok = New System.Windows.Forms.TextBox()
-        Me.lblGambar = New System.Windows.Forms.Label()
-        Me.pbAdmin = New System.Windows.Forms.PictureBox()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.btnUbah = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnCari = New System.Windows.Forms.Button()
         Me.txtCari = New System.Windows.Forms.TextBox()
-        Me.btnBrowse = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.dgvMakeUp = New System.Windows.Forms.DataGridView()
         Me.dgvSkinCare = New System.Windows.Forms.DataGridView()
@@ -51,15 +48,12 @@ Partial Class Admin
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewImageColumn()
-        CType(Me.pbAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -180,36 +174,13 @@ Partial Class Admin
         Me.txtStok.Size = New System.Drawing.Size(274, 23)
         Me.txtStok.TabIndex = 11
         '
-        'lblGambar
-        '
-        Me.lblGambar.AutoSize = True
-        Me.lblGambar.BackColor = System.Drawing.Color.Transparent
-        Me.lblGambar.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblGambar.Location = New System.Drawing.Point(33, 411)
-        Me.lblGambar.Name = "lblGambar"
-        Me.lblGambar.Size = New System.Drawing.Size(62, 16)
-        Me.lblGambar.TabIndex = 12
-        Me.lblGambar.Text = "Gambar"
-        '
-        'pbAdmin
-        '
-        Me.pbAdmin.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.pbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pbAdmin.Location = New System.Drawing.Point(36, 430)
-        Me.pbAdmin.Name = "pbAdmin"
-        Me.pbAdmin.Size = New System.Drawing.Size(192, 150)
-        Me.pbAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbAdmin.TabIndex = 13
-        Me.pbAdmin.TabStop = False
-        '
         'btnTambah
         '
         Me.btnTambah.BackColor = System.Drawing.Color.LimeGreen
         Me.btnTambah.FlatAppearance.BorderSize = 0
         Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTambah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTambah.Location = New System.Drawing.Point(376, 549)
+        Me.btnTambah.Location = New System.Drawing.Point(34, 427)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(75, 23)
         Me.btnTambah.TabIndex = 15
@@ -222,7 +193,7 @@ Partial Class Admin
         Me.btnUbah.FlatAppearance.BorderSize = 0
         Me.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUbah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUbah.Location = New System.Drawing.Point(457, 549)
+        Me.btnUbah.Location = New System.Drawing.Point(136, 427)
         Me.btnUbah.Name = "btnUbah"
         Me.btnUbah.Size = New System.Drawing.Size(75, 23)
         Me.btnUbah.TabIndex = 16
@@ -235,7 +206,7 @@ Partial Class Admin
         Me.btnHapus.FlatAppearance.BorderSize = 0
         Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnHapus.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHapus.Location = New System.Drawing.Point(538, 549)
+        Me.btnHapus.Location = New System.Drawing.Point(233, 427)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
         Me.btnHapus.TabIndex = 17
@@ -248,7 +219,7 @@ Partial Class Admin
         Me.btnCari.FlatAppearance.BorderSize = 0
         Me.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCari.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCari.Location = New System.Drawing.Point(376, 23)
+        Me.btnCari.Location = New System.Drawing.Point(612, 23)
         Me.btnCari.Name = "btnCari"
         Me.btnCari.Size = New System.Drawing.Size(75, 23)
         Me.btnCari.TabIndex = 18
@@ -258,23 +229,10 @@ Partial Class Admin
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCari.Location = New System.Drawing.Point(457, 23)
+        Me.txtCari.Location = New System.Drawing.Point(376, 23)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(230, 23)
         Me.txtCari.TabIndex = 20
-        '
-        'btnBrowse
-        '
-        Me.btnBrowse.BackColor = System.Drawing.Color.Orange
-        Me.btnBrowse.FlatAppearance.BorderSize = 0
-        Me.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBrowse.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBrowse.Location = New System.Drawing.Point(234, 430)
-        Me.btnBrowse.Name = "btnBrowse"
-        Me.btnBrowse.Size = New System.Drawing.Size(75, 23)
-        Me.btnBrowse.TabIndex = 22
-        Me.btnBrowse.Text = "Browse"
-        Me.btnBrowse.UseVisualStyleBackColor = False
         '
         'OpenFileDialog1
         '
@@ -285,7 +243,7 @@ Partial Class Admin
         Me.dgvMakeUp.BackgroundColor = System.Drawing.SystemColors.Info
         Me.dgvMakeUp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvMakeUp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMakeUp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
+        Me.dgvMakeUp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13})
         Me.dgvMakeUp.Location = New System.Drawing.Point(376, 277)
         Me.dgvMakeUp.Name = "dgvMakeUp"
         Me.dgvMakeUp.ReadOnly = True
@@ -297,7 +255,7 @@ Partial Class Admin
         Me.dgvSkinCare.BackgroundColor = System.Drawing.SystemColors.Info
         Me.dgvSkinCare.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvSkinCare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSkinCare.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.dgvSkinCare.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
         Me.dgvSkinCare.Location = New System.Drawing.Point(376, 52)
         Me.dgvSkinCare.Name = "dgvSkinCare"
         Me.dgvSkinCare.ReadOnly = True
@@ -340,14 +298,6 @@ Partial Class Admin
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
         '
-        'Column7
-        '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column7.HeaderText = "GAMBAR"
-        Me.Column7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
         'Column8
         '
         Me.Column8.HeaderText = "ID"
@@ -384,13 +334,6 @@ Partial Class Admin
         Me.Column13.Name = "Column13"
         Me.Column13.ReadOnly = True
         '
-        'Column14
-        '
-        Me.Column14.HeaderText = "GAMBAR"
-        Me.Column14.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
-        Me.Column14.Name = "Column14"
-        Me.Column14.ReadOnly = True
-        '
         'Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -399,15 +342,12 @@ Partial Class Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(936, 591)
         Me.Controls.Add(Me.dgvSkinCare)
-        Me.Controls.Add(Me.btnBrowse)
         Me.Controls.Add(Me.dgvMakeUp)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.btnCari)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnUbah)
         Me.Controls.Add(Me.btnTambah)
-        Me.Controls.Add(Me.pbAdmin)
-        Me.Controls.Add(Me.lblGambar)
         Me.Controls.Add(Me.txtStok)
         Me.Controls.Add(Me.lblStok)
         Me.Controls.Add(Me.txtHarga)
@@ -423,7 +363,6 @@ Partial Class Admin
         Me.DoubleBuffered = True
         Me.Name = "Admin"
         Me.Text = "Admin"
-        CType(Me.pbAdmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -443,14 +382,11 @@ Partial Class Admin
     Friend WithEvents txtHarga As TextBox
     Friend WithEvents lblStok As Label
     Friend WithEvents txtStok As TextBox
-    Friend WithEvents lblGambar As Label
-    Friend WithEvents pbAdmin As PictureBox
     Friend WithEvents btnTambah As Button
     Friend WithEvents btnUbah As Button
     Friend WithEvents btnHapus As Button
     Friend WithEvents btnCari As Button
     Friend WithEvents txtCari As TextBox
-    Friend WithEvents btnBrowse As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents dgvMakeUp As DataGridView
     Friend WithEvents dgvSkinCare As DataGridView
@@ -460,12 +396,10 @@ Partial Class Admin
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
-    Friend WithEvents Column14 As DataGridViewImageColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewImageColumn
 End Class
