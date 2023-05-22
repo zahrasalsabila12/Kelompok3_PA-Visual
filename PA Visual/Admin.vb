@@ -185,12 +185,35 @@ Public Class Admin
     End Sub
     'button mengubah data
     Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
-        If cbJenis.Text = "Skin Care" Then
-            Call updateSC()
-        ElseIf cbJenis.Text = "Make Up" Then
-            Call updateMU()
+        If (txtID.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda ubah pada tabel data")
+            txtID.Focus()
+        ElseIf (cbJenis.Text = "") Then
+            MsgBox("Data belum lengkap")
+            cbJenis.Focus()
+        ElseIf (txtNama.Text = "") Then
+            MsgBox("Data belum lengkap")
+            txtNama.Focus()
+        ElseIf (txtMerk.Text = "") Then
+            MsgBox("Data belum lengkap")
+            txtMerk.Focus()
+        ElseIf (cbJenis.Text = "") Then
+            MsgBox("Data belum lengkap")
+            cbJenis.Focus()
+        ElseIf (txtHarga.Text = "") Then
+            MsgBox("Data belum lengkap")
+            txtHarga.Focus()
+        ElseIf (txtStok.Text = "") Then
+            MsgBox("Data belum lengkap")
+            txtStok.Focus()
         Else
-            MsgBox("Terjasi kesalahan!", MsgBoxStyle.Exclamation)
+            If cbJenis.Text = "Skin Care" Then
+                Call updateSC()
+            ElseIf cbJenis.Text = "Make Up" Then
+                Call updateMU()
+            Else
+                MsgBox("Terjasi kesalahan!", MsgBoxStyle.Exclamation)
+            End If
         End If
     End Sub
 End Class

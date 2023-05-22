@@ -54,7 +54,8 @@ Partial Class Admin
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnKembali = New System.Windows.Forms.Button()
+        Me.btnBatal = New System.Windows.Forms.Button()
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -189,7 +190,7 @@ Partial Class Admin
         Me.btnTambah.FlatAppearance.BorderSize = 0
         Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTambah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTambah.Location = New System.Drawing.Point(34, 427)
+        Me.btnTambah.Location = New System.Drawing.Point(21, 430)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(75, 23)
         Me.btnTambah.TabIndex = 15
@@ -202,7 +203,7 @@ Partial Class Admin
         Me.btnUbah.FlatAppearance.BorderSize = 0
         Me.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUbah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUbah.Location = New System.Drawing.Point(136, 427)
+        Me.btnUbah.Location = New System.Drawing.Point(102, 430)
         Me.btnUbah.Name = "btnUbah"
         Me.btnUbah.Size = New System.Drawing.Size(75, 23)
         Me.btnUbah.TabIndex = 16
@@ -211,11 +212,11 @@ Partial Class Admin
         '
         'btnHapus
         '
-        Me.btnHapus.BackColor = System.Drawing.Color.Salmon
+        Me.btnHapus.BackColor = System.Drawing.Color.Red
         Me.btnHapus.FlatAppearance.BorderSize = 0
         Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnHapus.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHapus.Location = New System.Drawing.Point(233, 427)
+        Me.btnHapus.Location = New System.Drawing.Point(264, 430)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
         Me.btnHapus.TabIndex = 17
@@ -343,18 +344,31 @@ Partial Class Admin
         Me.Column12.Name = "Column12"
         Me.Column12.ReadOnly = True
         '
-        'Button1
+        'btnKembali
         '
-        Me.Button1.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "<< Back"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnKembali.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnKembali.FlatAppearance.BorderSize = 0
+        Me.btnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnKembali.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKembali.Location = New System.Drawing.Point(245, 23)
+        Me.btnKembali.Name = "btnKembali"
+        Me.btnKembali.Size = New System.Drawing.Size(97, 23)
+        Me.btnKembali.TabIndex = 25
+        Me.btnKembali.Text = "<< Kembali"
+        Me.btnKembali.UseVisualStyleBackColor = False
+        '
+        'btnBatal
+        '
+        Me.btnBatal.BackColor = System.Drawing.Color.Orchid
+        Me.btnBatal.FlatAppearance.BorderSize = 0
+        Me.btnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBatal.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBatal.Location = New System.Drawing.Point(183, 430)
+        Me.btnBatal.Name = "btnBatal"
+        Me.btnBatal.Size = New System.Drawing.Size(75, 23)
+        Me.btnBatal.TabIndex = 26
+        Me.btnBatal.Text = "Batal"
+        Me.btnBatal.UseVisualStyleBackColor = False
         '
         'Admin
         '
@@ -363,7 +377,8 @@ Partial Class Admin
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(936, 591)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnBatal)
+        Me.Controls.Add(Me.btnKembali)
         Me.Controls.Add(Me.dgvMakeUp)
         Me.Controls.Add(Me.dgvSkinCare)
         Me.Controls.Add(Me.txtCari)
@@ -425,5 +440,6 @@ Partial Class Admin
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnKembali As Button
+    Friend WithEvents btnBatal As Button
 End Class
