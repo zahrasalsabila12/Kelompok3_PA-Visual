@@ -1,10 +1,12 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 Module Koneksi
     Public CONN As MySqlConnection
     Public CMD As MySqlCommand
     Public RD As MySqlDataReader
     Public DA As MySqlDataAdapter
     Public DS As DataSet
+    Public MS As MemoryStream
     Public STR As String
 
     Sub Connect()

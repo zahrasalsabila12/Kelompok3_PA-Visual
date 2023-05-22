@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Admin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Admin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblID = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
@@ -36,14 +36,18 @@ Partial Class Admin
         Me.txtStok = New System.Windows.Forms.TextBox()
         Me.lblGambar = New System.Windows.Forms.Label()
         Me.pbAdmin = New System.Windows.Forms.PictureBox()
-        Me.dgvAdmin = New System.Windows.Forms.DataGridView()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.btnUbah = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnCari = New System.Windows.Forms.Button()
         Me.txtCari = New System.Windows.Forms.TextBox()
+        Me.btnBrowse = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.dgvMakeUp = New System.Windows.Forms.DataGridView()
+        Me.dgvSkinCare = New System.Windows.Forms.DataGridView()
         CType(Me.pbAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvAdmin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblID
@@ -176,22 +180,14 @@ Partial Class Admin
         'pbAdmin
         '
         Me.pbAdmin.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.pbAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pbAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pbAdmin.Location = New System.Drawing.Point(36, 430)
         Me.pbAdmin.Name = "pbAdmin"
-        Me.pbAdmin.Size = New System.Drawing.Size(273, 113)
+        Me.pbAdmin.Size = New System.Drawing.Size(192, 150)
+        Me.pbAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pbAdmin.TabIndex = 13
         Me.pbAdmin.TabStop = False
-        '
-        'dgvAdmin
-        '
-        Me.dgvAdmin.BackgroundColor = System.Drawing.SystemColors.Info
-        Me.dgvAdmin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.dgvAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAdmin.Location = New System.Drawing.Point(396, 139)
-        Me.dgvAdmin.Name = "dgvAdmin"
-        Me.dgvAdmin.Size = New System.Drawing.Size(501, 311)
-        Me.dgvAdmin.TabIndex = 14
         '
         'btnTambah
         '
@@ -199,7 +195,7 @@ Partial Class Admin
         Me.btnTambah.FlatAppearance.BorderSize = 0
         Me.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTambah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTambah.Location = New System.Drawing.Point(396, 456)
+        Me.btnTambah.Location = New System.Drawing.Point(376, 549)
         Me.btnTambah.Name = "btnTambah"
         Me.btnTambah.Size = New System.Drawing.Size(75, 23)
         Me.btnTambah.TabIndex = 15
@@ -212,7 +208,7 @@ Partial Class Admin
         Me.btnUbah.FlatAppearance.BorderSize = 0
         Me.btnUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUbah.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUbah.Location = New System.Drawing.Point(477, 456)
+        Me.btnUbah.Location = New System.Drawing.Point(457, 549)
         Me.btnUbah.Name = "btnUbah"
         Me.btnUbah.Size = New System.Drawing.Size(75, 23)
         Me.btnUbah.TabIndex = 16
@@ -225,7 +221,7 @@ Partial Class Admin
         Me.btnHapus.FlatAppearance.BorderSize = 0
         Me.btnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnHapus.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHapus.Location = New System.Drawing.Point(558, 456)
+        Me.btnHapus.Location = New System.Drawing.Point(538, 549)
         Me.btnHapus.Name = "btnHapus"
         Me.btnHapus.Size = New System.Drawing.Size(75, 23)
         Me.btnHapus.TabIndex = 17
@@ -238,7 +234,7 @@ Partial Class Admin
         Me.btnCari.FlatAppearance.BorderSize = 0
         Me.btnCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCari.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCari.Location = New System.Drawing.Point(396, 110)
+        Me.btnCari.Location = New System.Drawing.Point(376, 23)
         Me.btnCari.Name = "btnCari"
         Me.btnCari.Size = New System.Drawing.Size(75, 23)
         Me.btnCari.TabIndex = 18
@@ -248,10 +244,49 @@ Partial Class Admin
         'txtCari
         '
         Me.txtCari.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCari.Location = New System.Drawing.Point(477, 110)
+        Me.txtCari.Location = New System.Drawing.Point(457, 23)
         Me.txtCari.Name = "txtCari"
         Me.txtCari.Size = New System.Drawing.Size(230, 23)
         Me.txtCari.TabIndex = 20
+        '
+        'btnBrowse
+        '
+        Me.btnBrowse.BackColor = System.Drawing.Color.Orange
+        Me.btnBrowse.FlatAppearance.BorderSize = 0
+        Me.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBrowse.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBrowse.Location = New System.Drawing.Point(234, 430)
+        Me.btnBrowse.Name = "btnBrowse"
+        Me.btnBrowse.Size = New System.Drawing.Size(75, 23)
+        Me.btnBrowse.TabIndex = 22
+        Me.btnBrowse.Text = "Browse"
+        Me.btnBrowse.UseVisualStyleBackColor = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'dgvMakeUp
+        '
+        Me.dgvMakeUp.BackgroundColor = System.Drawing.SystemColors.Info
+        Me.dgvMakeUp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvMakeUp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMakeUp.Location = New System.Drawing.Point(376, 277)
+        Me.dgvMakeUp.Name = "dgvMakeUp"
+        Me.dgvMakeUp.ReadOnly = True
+        Me.dgvMakeUp.Size = New System.Drawing.Size(538, 266)
+        Me.dgvMakeUp.TabIndex = 21
+        '
+        'dgvSkinCare
+        '
+        Me.dgvSkinCare.BackgroundColor = System.Drawing.SystemColors.Info
+        Me.dgvSkinCare.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvSkinCare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSkinCare.Location = New System.Drawing.Point(376, 52)
+        Me.dgvSkinCare.Name = "dgvSkinCare"
+        Me.dgvSkinCare.ReadOnly = True
+        Me.dgvSkinCare.Size = New System.Drawing.Size(538, 219)
+        Me.dgvSkinCare.TabIndex = 23
         '
         'Admin
         '
@@ -259,13 +294,15 @@ Partial Class Admin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(936, 580)
+        Me.ClientSize = New System.Drawing.Size(936, 591)
+        Me.Controls.Add(Me.dgvSkinCare)
+        Me.Controls.Add(Me.btnBrowse)
+        Me.Controls.Add(Me.dgvMakeUp)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.btnCari)
         Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.btnUbah)
         Me.Controls.Add(Me.btnTambah)
-        Me.Controls.Add(Me.dgvAdmin)
         Me.Controls.Add(Me.pbAdmin)
         Me.Controls.Add(Me.lblGambar)
         Me.Controls.Add(Me.txtStok)
@@ -284,7 +321,8 @@ Partial Class Admin
         Me.Name = "Admin"
         Me.Text = "Admin"
         CType(Me.pbAdmin, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvAdmin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -304,10 +342,13 @@ Partial Class Admin
     Friend WithEvents txtStok As TextBox
     Friend WithEvents lblGambar As Label
     Friend WithEvents pbAdmin As PictureBox
-    Friend WithEvents dgvAdmin As DataGridView
     Friend WithEvents btnTambah As Button
     Friend WithEvents btnUbah As Button
     Friend WithEvents btnHapus As Button
     Friend WithEvents btnCari As Button
     Friend WithEvents txtCari As TextBox
+    Friend WithEvents btnBrowse As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents dgvMakeUp As DataGridView
+    Friend WithEvents dgvSkinCare As DataGridView
 End Class

@@ -1,6 +1,4 @@
-Imports System.Windows
 Imports MySql.Data.MySqlClient
-﻿Imports System.Data.OleDb
 
 Public Class Form1
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
