@@ -47,12 +47,12 @@ Public Class Admin
         dgvMakeUp.Rows.Clear()
         For i = 0 To data.Rows.Count - 1
             dgvSkinCare.Rows.Add()
-            dgvMakeUp.Rows(i).Cells(6).Value = data.Rows(i).Item(0).ToString
-            dgvMakeUp.Rows(i).Cells(7).Value = data.Rows(i).Item(1).ToString
-            dgvMakeUp.Rows(i).Cells(8).Value = data.Rows(i).Item(2).ToString
-            dgvMakeUp.Rows(i).Cells(9).Value = data.Rows(i).Item(3).ToString
-            dgvMakeUp.Rows(i).Cells(10).Value = data.Rows(i).Item(4).ToString
-            dgvMakeUp.Rows(i).Cells(11).Value = data.Rows(i).Item(5).ToString
+            dgvMakeUp.Rows(i).Cells(0).Value = data.Rows(i).Item(0).ToString
+            dgvMakeUp.Rows(i).Cells(1).Value = data.Rows(i).Item(1).ToString
+            dgvMakeUp.Rows(i).Cells(2).Value = data.Rows(i).Item(2).ToString
+            dgvMakeUp.Rows(i).Cells(3).Value = data.Rows(i).Item(3).ToString
+            dgvMakeUp.Rows(i).Cells(4).Value = data.Rows(i).Item(4).ToString
+            dgvMakeUp.Rows(i).Cells(5).Value = data.Rows(i).Item(5).ToString
         Next
         dgvMakeUp.Refresh()
     End Sub
