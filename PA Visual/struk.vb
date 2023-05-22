@@ -9,7 +9,7 @@ Public Class struk
         Dim screenBounds As Rectangle = Screen.PrimaryScreen.Bounds
         Dim numScreenshots As Integer = 1
 
-        For i As Integer = 5 To numScreenshots
+        For i As Integer = 1 To numScreenshots
             Dim screenshot As New Bitmap(screenBounds.Width, screenBounds.Height, PixelFormat.Format32bppArgb)
             Using g As Graphics = Graphics.FromImage(screenshot)
                 g.CopyFromScreen(screenBounds.Location, Point.Empty, screenBounds.Size)

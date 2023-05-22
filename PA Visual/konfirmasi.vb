@@ -18,8 +18,6 @@
             dgvKeranjang.Columns(4).HeaderText = "HARGA SATUAN"
             dgvKeranjang.Columns(5).HeaderText = "JUMLAH BARANG"
             dgvKeranjang.Columns(6).HeaderText = "TOTAL"
-            dgvKeranjang.Columns(7).HeaderText = "GAMBAR"
-            dgvKeranjang.Columns(7).Visible = False
         End If
         Penomoran(dgvKeranjang)
     End Sub
