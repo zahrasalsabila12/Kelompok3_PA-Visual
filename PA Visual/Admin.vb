@@ -269,7 +269,7 @@ Public Class Admin
     End Sub
 
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
-        Me.Close()
+        Me.Hide()
         Form1.ShowDialog()
     End Sub
 End Class

@@ -224,7 +224,7 @@ Partial Class mainUser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.mainUser
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1430, 733)
+        Me.ClientSize = New System.Drawing.Size(1370, 733)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
