@@ -54,7 +54,7 @@ Partial Class Admin
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnKembali = New System.Windows.Forms.Button()
+        Me.btnKeluar = New System.Windows.Forms.Button()
         Me.btnBatal = New System.Windows.Forms.Button()
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -344,18 +344,18 @@ Partial Class Admin
         Me.Column12.Name = "Column12"
         Me.Column12.ReadOnly = True
         '
-        'btnKembali
+        'btnKeluar
         '
-        Me.btnKembali.BackColor = System.Drawing.Color.DarkSalmon
-        Me.btnKembali.FlatAppearance.BorderSize = 0
-        Me.btnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnKembali.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnKembali.Location = New System.Drawing.Point(245, 23)
-        Me.btnKembali.Name = "btnKembali"
-        Me.btnKembali.Size = New System.Drawing.Size(97, 23)
-        Me.btnKembali.TabIndex = 25
-        Me.btnKembali.Text = "<< Kembali"
-        Me.btnKembali.UseVisualStyleBackColor = False
+        Me.btnKeluar.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnKeluar.FlatAppearance.BorderSize = 0
+        Me.btnKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnKeluar.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnKeluar.Location = New System.Drawing.Point(245, 23)
+        Me.btnKeluar.Name = "btnKeluar"
+        Me.btnKeluar.Size = New System.Drawing.Size(97, 23)
+        Me.btnKeluar.TabIndex = 25
+        Me.btnKeluar.Text = "<< Keluar"
+        Me.btnKeluar.UseVisualStyleBackColor = False
         '
         'btnBatal
         '
@@ -378,7 +378,7 @@ Partial Class Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(936, 591)
         Me.Controls.Add(Me.btnBatal)
-        Me.Controls.Add(Me.btnKembali)
+        Me.Controls.Add(Me.btnKeluar)
         Me.Controls.Add(Me.dgvMakeUp)
         Me.Controls.Add(Me.dgvSkinCare)
         Me.Controls.Add(Me.txtCari)
@@ -440,6 +440,6 @@ Partial Class Admin
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents btnKembali As Button
+    Friend WithEvents btnKeluar As Button
     Friend WithEvents btnBatal As Button
 End Class

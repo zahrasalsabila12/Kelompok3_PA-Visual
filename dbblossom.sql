@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2023 at 11:24 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: May 22, 2023 at 05:49 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `tbakun` (
   `id` text NOT NULL,
   `usename` text NOT NULL,
   `password` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -40,14 +40,13 @@ CREATE TABLE `tbakun` (
 --
 
 CREATE TABLE `tbmakeup` (
-  `id` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `id` text CHARACTER SET utf8 NOT NULL,
   `nama` text NOT NULL,
   `merk` text NOT NULL,
   `jenis` text NOT NULL,
   `harga` int(50) NOT NULL,
-  `stok` int(50) NOT NULL,
-  `gambar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `stok` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -56,14 +55,13 @@ CREATE TABLE `tbmakeup` (
 --
 
 CREATE TABLE `tbskincare` (
-  `id` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `id` text CHARACTER SET utf8 NOT NULL,
   `nama` text NOT NULL,
   `merk` text NOT NULL,
   `jenis` text NOT NULL,
   `harga` int(50) NOT NULL,
-  `stok` int(50) NOT NULL,
-  `gambar` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `stok` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables

@@ -13,6 +13,7 @@ Public Class Admin
     End Sub
     Sub Clean()
         txtID.Clear()
+        txtID.ReadOnly = False
         txtNama.Clear()
         txtMerk.Clear()
         cbJenis.Text = ""
@@ -212,8 +213,62 @@ Public Class Admin
             ElseIf cbJenis.Text = "Make Up" Then
                 Call updateMU()
             Else
-                MsgBox("Terjasi kesalahan!", MsgBoxStyle.Exclamation)
+                MsgBox("Terjadi kesalahan!", MsgBoxStyle.Exclamation)
             End If
         End If
+    End Sub
+    'button batal input
+    Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
+        Call Clean()
+    End Sub
+
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        If (txtID.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
+            txtID.Focus()
+        ElseIf (cbJenis.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
+            cbJenis.Focus()
+        ElseIf (txtNama.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
+            txtNama.Focus()
+        ElseIf (txtMerk.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
+            txtMerk.Focus()
+        ElseIf (cbJenis.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
+            cbJenis.Focus()
+        ElseIf (txtHarga.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
+            txtHarga.Focus()
+        ElseIf (txtStok.Text = "") Then
+            MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
+            txtStok.Focus()
+        Else
+            If cbJenis.Text = "Skin Care" Then
+                If MessageBox.Show("Anda yakin ingin menghapus data skin care?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                    CMD = New MySqlCommand("Delete From tbskincare where id='" & txtID.Text & "'", CONN)
+                    CMD.ExecuteNonQuery()
+                    Call Clean()
+                    Call DisplaySkincare()
+                Else
+                    Call Clean()
+                End If
+            ElseIf cbJenis.Text = "Make Up" Then
+                If MessageBox.Show("Anda yakin ingin menghapus data make up?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                    CMD = New MySqlCommand("Delete From tbmakeup where id='" & txtID.Text & "'", CONN)
+                    CMD.ExecuteNonQuery()
+                    Call Clean()
+                    Call DisplaySkincare()
+                Else
+                    Call Clean()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
+        Me.Close()
+        Form1.ShowDialog()
     End Sub
 End Class
