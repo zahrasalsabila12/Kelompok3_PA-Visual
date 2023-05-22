@@ -39,6 +39,7 @@ E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visua
 E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.pdb
 E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.xml
 E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.exe.config
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.exe
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.pdb
@@ -71,3 +72,25 @@ C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.exe
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.xml
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.pdb
+=======
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.exe.config
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.exe
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.pdb
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\PA Visual.xml
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.AssemblyReference.cache
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.SuggestedBindingRedirects.cache
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Admin.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Form1.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.homeUser.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.konfirmasi.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.mainUser.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Resources.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.Register.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.struk.resources
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.GenerateResource.cache
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.CoreCompileInputs.cache
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.vbproj.CopyComplete
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.exe
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.xml
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.pdb
+>>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b

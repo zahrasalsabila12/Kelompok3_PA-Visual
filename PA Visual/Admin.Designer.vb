@@ -40,6 +40,7 @@ Partial Class Admin
         Me.btnCari = New System.Windows.Forms.Button()
         Me.txtCari = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+<<<<<<< HEAD
         Me.dgvMakeUp = New System.Windows.Forms.DataGridView()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,6 +48,8 @@ Partial Class Admin
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+=======
+>>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b
         Me.dgvSkinCare = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,8 +57,19 @@ Partial Class Admin
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+<<<<<<< HEAD
         CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
+        Me.dgvMakeUp = New System.Windows.Forms.DataGridView()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+>>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblID
@@ -255,6 +269,7 @@ Partial Class Admin
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+<<<<<<< HEAD
         'dgvMakeUp
         '
         Me.dgvMakeUp.BackgroundColor = System.Drawing.SystemColors.Info
@@ -317,6 +332,8 @@ Partial Class Admin
         Me.Column13.ReadOnly = True
         Me.Column13.Width = 125
         '
+=======
+>>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b
         'dgvSkinCare
         '
         Me.dgvSkinCare.BackgroundColor = System.Drawing.SystemColors.Info
@@ -377,7 +394,52 @@ Partial Class Admin
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
+<<<<<<< HEAD
         Me.Column6.Width = 125
+=======
+        '
+        'dgvMakeUp
+        '
+        Me.dgvMakeUp.BackgroundColor = System.Drawing.Color.SeaShell
+        Me.dgvMakeUp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvMakeUp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMakeUp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12})
+        Me.dgvMakeUp.Location = New System.Drawing.Point(376, 277)
+        Me.dgvMakeUp.Name = "dgvMakeUp"
+        Me.dgvMakeUp.ReadOnly = True
+        Me.dgvMakeUp.Size = New System.Drawing.Size(538, 288)
+        Me.dgvMakeUp.TabIndex = 24
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "ID"
+        Me.Column7.Name = "Column7"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "NAMA"
+        Me.Column8.Name = "Column8"
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "MERK"
+        Me.Column9.Name = "Column9"
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "JENIS"
+        Me.Column10.Name = "Column10"
+        '
+        'Column11
+        '
+        Me.Column11.HeaderText = "HARGA"
+        Me.Column11.Name = "Column11"
+        '
+        'Column12
+        '
+        Me.Column12.HeaderText = "STOK"
+        Me.Column12.Name = "Column12"
+>>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b
         '
         'Admin
         '
@@ -385,9 +447,14 @@ Partial Class Admin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(1248, 727)
         Me.Controls.Add(Me.dgvSkinCare)
+=======
+        Me.ClientSize = New System.Drawing.Size(936, 591)
+>>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b
         Me.Controls.Add(Me.dgvMakeUp)
+        Me.Controls.Add(Me.dgvSkinCare)
         Me.Controls.Add(Me.txtCari)
         Me.Controls.Add(Me.btnCari)
         Me.Controls.Add(Me.btnHapus)
@@ -409,8 +476,8 @@ Partial Class Admin
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Admin"
         Me.Text = "Admin"
-        CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -434,18 +501,18 @@ Partial Class Admin
     Friend WithEvents btnCari As Button
     Friend WithEvents txtCari As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents dgvMakeUp As DataGridView
     Friend WithEvents dgvSkinCare As DataGridView
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column12 As DataGridViewTextBoxColumn
-    Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents dgvMakeUp As DataGridView
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
 End Class
