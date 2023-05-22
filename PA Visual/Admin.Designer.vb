@@ -54,6 +54,7 @@ Partial Class Admin
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dgvSkinCare, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvMakeUp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,6 +72,9 @@ Partial Class Admin
         '
         'txtID
         '
+        Me.txtID.AcceptsReturn = True
+        Me.txtID.AcceptsTab = True
+        Me.txtID.AllowDrop = True
         Me.txtID.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.Location = New System.Drawing.Point(35, 158)
         Me.txtID.Name = "txtID"
@@ -90,6 +94,7 @@ Partial Class Admin
         '
         'txtNama
         '
+        Me.txtNama.AllowDrop = True
         Me.txtNama.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNama.Location = New System.Drawing.Point(35, 203)
         Me.txtNama.Name = "txtNama"
@@ -109,6 +114,7 @@ Partial Class Admin
         '
         'txtMerk
         '
+        Me.txtMerk.AllowDrop = True
         Me.txtMerk.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMerk.Location = New System.Drawing.Point(35, 248)
         Me.txtMerk.Name = "txtMerk"
@@ -128,6 +134,7 @@ Partial Class Admin
         '
         'cbJenis
         '
+        Me.cbJenis.AllowDrop = True
         Me.cbJenis.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbJenis.FormattingEnabled = True
         Me.cbJenis.Items.AddRange(New Object() {"Skin Care", "Make Up"})
@@ -149,6 +156,7 @@ Partial Class Admin
         '
         'txtHarga
         '
+        Me.txtHarga.AllowDrop = True
         Me.txtHarga.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtHarga.Location = New System.Drawing.Point(35, 340)
         Me.txtHarga.Name = "txtHarga"
@@ -168,6 +176,7 @@ Partial Class Admin
         '
         'txtStok
         '
+        Me.txtStok.AllowDrop = True
         Me.txtStok.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtStok.Location = New System.Drawing.Point(35, 385)
         Me.txtStok.Name = "txtStok"
@@ -302,31 +311,50 @@ Partial Class Admin
         '
         Me.Column7.HeaderText = "ID"
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'Column8
         '
         Me.Column8.HeaderText = "NAMA"
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'Column9
         '
         Me.Column9.HeaderText = "MERK"
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         '
         'Column10
         '
         Me.Column10.HeaderText = "JENIS"
         Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
         '
         'Column11
         '
         Me.Column11.HeaderText = "HARGA"
         Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
         '
         'Column12
         '
         Me.Column12.HeaderText = "STOK"
         Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(12, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "<< Back"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Admin
         '
@@ -335,6 +363,7 @@ Partial Class Admin
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.Admin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(936, 591)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvMakeUp)
         Me.Controls.Add(Me.dgvSkinCare)
         Me.Controls.Add(Me.txtCari)
@@ -396,4 +425,5 @@ Partial Class Admin
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

@@ -1,6 +1,4 @@
-﻿Imports System.IO
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Admin
     Dim arrImg() As Byte
@@ -116,7 +114,25 @@ Public Class Admin
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    'menambahkan data
+    'ubah data skicare
+    Sub updateSC()
+        CMD = New MySqlCommand("Update tbskincare set nama='" & txtNama.Text & "', merk='" & txtMerk.Text & "', jenis='" & cbJenis.Text & "', harga='" & txtHarga.Text & "', stok='" & txtStok.Text & "' where id='" & txtID.Text & "'", CONN)
+        CMD.ExecuteNonQuery()
+        MessageBox.Show("Data berhasil diubah", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Call DisplaySkincare()
+        Call Clean()
+        txtID.Focus()
+    End Sub
+    'ubah data make up
+    Sub updateMU()
+        CMD = New MySqlCommand("Update tbmakeup set nama='" & txtNama.Text & "', merk='" & txtMerk.Text & "', jenis='" & cbJenis.Text & "', harga='" & txtHarga.Text & "', stok='" & txtStok.Text & "' where id='" & txtID.Text & "'", CONN)
+        CMD.ExecuteNonQuery()
+        MessageBox.Show("Data berhasil diubah", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Call DisplaySkincare()
+        Call Clean()
+        txtID.Focus()
+    End Sub
+    'button menambahkan data
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         If (txtID.Text = "") Then
             MsgBox("Data belum lengkap")
@@ -145,6 +161,36 @@ Public Class Admin
             ElseIf (cbJenis.Text = "Make Up") Then
                 Call addMU()
             End If
+        End If
+    End Sub
+    'display klik konten dari datagridview skin care
+    Private Sub dgvSkinCare_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSkinCare.CellContentClick, dgvSkinCare.CellClick
+        txtID.Text = dgvSkinCare.SelectedCells.Item(0).Value.ToString
+        txtID.ReadOnly = True
+        txtNama.Text = dgvSkinCare.SelectedCells.Item(1).Value.ToString
+        txtMerk.Text = dgvSkinCare.SelectedCells.Item(2).Value.ToString
+        cbJenis.Text = dgvSkinCare.SelectedCells.Item(3).Value.ToString
+        txtHarga.Text = dgvSkinCare.SelectedCells.Item(4).Value.ToString
+        txtStok.Text = dgvSkinCare.SelectedCells.Item(5).Value.ToString
+    End Sub
+    'display klik konten dari datagridview make up
+    Private Sub dgvMakeUp_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMakeUp.CellContentClick, dgvMakeUp.CellClick
+        txtID.Text = dgvMakeUp.SelectedCells.Item(0).Value.ToString
+        txtID.ReadOnly = True
+        txtNama.Text = dgvMakeUp.SelectedCells.Item(1).Value.ToString
+        txtMerk.Text = dgvMakeUp.SelectedCells.Item(2).Value.ToString
+        cbJenis.Text = dgvMakeUp.SelectedCells.Item(3).Value.ToString
+        txtHarga.Text = dgvMakeUp.SelectedCells.Item(4).Value.ToString
+        txtStok.Text = dgvMakeUp.SelectedCells.Item(5).Value.ToString
+    End Sub
+    'button mengubah data
+    Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
+        If cbJenis.Text = "Skin Care" Then
+            Call updateSC()
+        ElseIf cbJenis.Text = "Make Up" Then
+            Call updateMU()
+        Else
+            MsgBox("Terjasi kesalahan!", MsgBoxStyle.Exclamation)
         End If
     End Sub
 End Class
