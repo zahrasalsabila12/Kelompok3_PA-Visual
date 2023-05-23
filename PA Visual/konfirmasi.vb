@@ -38,6 +38,8 @@ Public Class konfirmasi
             updateCommandSkincare.ExecuteNonQuery()
         Next
         CONN.Close()
+        mainUser.dgvDaftarMakeup.Refresh()
+        mainUser.dgvDaftarSkincare.Refresh()
         MessageBox.Show("Pesanan telah berhasil")
         mainUser.dgvKeranjang.Rows.Clear()
         mainUser.txtTotalPesanan.Clear()

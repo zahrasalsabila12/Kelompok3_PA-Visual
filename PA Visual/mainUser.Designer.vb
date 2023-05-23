@@ -54,7 +54,7 @@ Partial Class mainUser
         Me.Label1.Location = New System.Drawing.Point(13, 180)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 15)
+        Me.Label1.Size = New System.Drawing.Size(97, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "No. Pesanan"
         '
@@ -65,7 +65,7 @@ Partial Class mainUser
         Me.TextBox1.Location = New System.Drawing.Point(141, 172)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(276, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(276, 32)
         Me.TextBox1.TabIndex = 1
         '
         'GroupBox1
@@ -78,7 +78,7 @@ Partial Class mainUser
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(664, 272)
+        Me.GroupBox1.Size = New System.Drawing.Size(620, 272)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Skincare"
@@ -88,7 +88,7 @@ Partial Class mainUser
         Me.btnTambahSkincare.BackColor = System.Drawing.Color.RosyBrown
         Me.btnTambahSkincare.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTambahSkincare.ForeColor = System.Drawing.Color.SeaShell
-        Me.btnTambahSkincare.Location = New System.Drawing.Point(276, 228)
+        Me.btnTambahSkincare.Location = New System.Drawing.Point(257, 228)
         Me.btnTambahSkincare.Name = "btnTambahSkincare"
         Me.btnTambahSkincare.Size = New System.Drawing.Size(107, 32)
         Me.btnTambahSkincare.TabIndex = 2
@@ -100,10 +100,14 @@ Partial Class mainUser
         Me.dgvDaftarSkincare.BackgroundColor = System.Drawing.Color.RosyBrown
         Me.dgvDaftarSkincare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDaftarSkincare.Location = New System.Drawing.Point(19, 27)
+        Me.dgvDaftarSkincare.MultiSelect = False
         Me.dgvDaftarSkincare.Name = "dgvDaftarSkincare"
+        Me.dgvDaftarSkincare.ReadOnly = True
+        Me.dgvDaftarSkincare.RowHeadersVisible = False
         Me.dgvDaftarSkincare.RowHeadersWidth = 51
         Me.dgvDaftarSkincare.RowTemplate.Height = 24
-        Me.dgvDaftarSkincare.Size = New System.Drawing.Size(624, 195)
+        Me.dgvDaftarSkincare.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDaftarSkincare.Size = New System.Drawing.Size(571, 195)
         Me.dgvDaftarSkincare.TabIndex = 0
         '
         'GroupBox2
@@ -112,11 +116,11 @@ Partial Class mainUser
         Me.GroupBox2.Controls.Add(Me.btnTambahMakeup)
         Me.GroupBox2.Controls.Add(Me.dgvDaftarMakeup)
         Me.GroupBox2.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.GroupBox2.Location = New System.Drawing.Point(755, 220)
+        Me.GroupBox2.Location = New System.Drawing.Point(728, 220)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(662, 272)
+        Me.GroupBox2.Size = New System.Drawing.Size(603, 272)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Makeup"
@@ -126,7 +130,7 @@ Partial Class mainUser
         Me.btnTambahMakeup.BackColor = System.Drawing.Color.RosyBrown
         Me.btnTambahMakeup.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTambahMakeup.ForeColor = System.Drawing.Color.SeaShell
-        Me.btnTambahMakeup.Location = New System.Drawing.Point(292, 228)
+        Me.btnTambahMakeup.Location = New System.Drawing.Point(243, 228)
         Me.btnTambahMakeup.Name = "btnTambahMakeup"
         Me.btnTambahMakeup.Size = New System.Drawing.Size(107, 32)
         Me.btnTambahMakeup.TabIndex = 2
@@ -138,10 +142,14 @@ Partial Class mainUser
         Me.dgvDaftarMakeup.BackgroundColor = System.Drawing.Color.RosyBrown
         Me.dgvDaftarMakeup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDaftarMakeup.Location = New System.Drawing.Point(19, 27)
+        Me.dgvDaftarMakeup.MultiSelect = False
         Me.dgvDaftarMakeup.Name = "dgvDaftarMakeup"
+        Me.dgvDaftarMakeup.ReadOnly = True
+        Me.dgvDaftarMakeup.RowHeadersVisible = False
         Me.dgvDaftarMakeup.RowHeadersWidth = 51
         Me.dgvDaftarMakeup.RowTemplate.Height = 24
-        Me.dgvDaftarMakeup.Size = New System.Drawing.Size(624, 195)
+        Me.dgvDaftarMakeup.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDaftarMakeup.Size = New System.Drawing.Size(559, 195)
         Me.dgvDaftarMakeup.TabIndex = 0
         '
         'GroupBox3
@@ -153,7 +161,7 @@ Partial Class mainUser
         Me.GroupBox3.Controls.Add(Me.btnCheckout)
         Me.GroupBox3.Controls.Add(Me.dgvKeranjang)
         Me.GroupBox3.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.GroupBox3.Location = New System.Drawing.Point(103, 514)
+        Me.GroupBox3.Location = New System.Drawing.Point(72, 521)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
@@ -181,7 +189,7 @@ Partial Class mainUser
         Me.txtTotalPesanan.Location = New System.Drawing.Point(872, 64)
         Me.txtTotalPesanan.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalPesanan.Name = "txtTotalPesanan"
-        Me.txtTotalPesanan.Size = New System.Drawing.Size(276, 27)
+        Me.txtTotalPesanan.Size = New System.Drawing.Size(276, 32)
         Me.txtTotalPesanan.TabIndex = 4
         '
         'Label2
@@ -193,7 +201,7 @@ Partial Class mainUser
         Me.Label2.Location = New System.Drawing.Point(869, 45)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 15)
+        Me.Label2.Size = New System.Drawing.Size(108, 18)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Total Pesanan"
         '
@@ -228,7 +236,7 @@ Partial Class mainUser
         Me.btnLogout.BackColor = System.Drawing.Color.RosyBrown
         Me.btnLogout.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.Color.SeaShell
-        Me.btnLogout.Location = New System.Drawing.Point(1291, 167)
+        Me.btnLogout.Location = New System.Drawing.Point(1199, 169)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(107, 32)
         Me.btnLogout.TabIndex = 3
@@ -237,7 +245,7 @@ Partial Class mainUser
         '
         'mainUser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.mainUser
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
