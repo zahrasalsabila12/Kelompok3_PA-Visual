@@ -269,8 +269,8 @@ Public Class MenuAdmin
     End Sub
     'button keluar
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
-        Me.Hide()
-        Form1.ShowDialog()
+        Me.Visible = False
+        Form1.Show()
     End Sub
     'button cari
     Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click

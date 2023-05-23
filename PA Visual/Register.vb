@@ -10,7 +10,7 @@ Public Class Register
         If username = "" Or password = "" Then
             MessageBox.Show("Mohon isi semua field.")
         Else
-            Dim query As String = "INSERT INTO tbakun (usename, password) VALUES ('" & txtNewUser.Text & "','" & txtNewPass.Text & "')"
+            Dim query As String = "INSERT INTO tbakun (username, password) VALUES ('" & txtNewUser.Text & "','" & txtNewPass.Text & "')"
             CMD = New MySqlCommand(query, CONN)
             CMD.Parameters.AddWithValue(txtNewUser.Text, username)
             CMD.Parameters.AddWithValue(txtNewPass.Text, password)
@@ -29,4 +29,5 @@ Public Class Register
         Me.Visible = False
         Form1.ShowDialog()
     End Sub
+
 End Class

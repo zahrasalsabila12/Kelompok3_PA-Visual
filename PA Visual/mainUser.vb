@@ -104,6 +104,11 @@ Public Class mainUser
             End If
             Dim Total As Integer = Val(dgvKeranjang.CurrentRow.Cells(5).Value) * Val(dgvKeranjang.CurrentRow.Cells(4).Value)
             dgvKeranjang.CurrentRow.Cells(6).Value = Total
+
+            'query cek stok dari nama yg ada di cell 1
+            'q = SELECT stok FROM `tbmakeup` where nama = "&dgvKeranjang.CurrentRow.Cells(5).Value&";
+            'cek jika dgvKeranjang.CurrentRow.Cells(5).Value > q
+            'pop up error kalau lebih b
             UpdateTotalPembayaran()
         Catch ex As Exception
             MessageBox.Show("Masukkan Angka!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -143,6 +148,7 @@ Public Class mainUser
                 Dim jenisMakeup As String = dgvDaftarMakeup.Rows(indeks).Cells(3).Value
                 Dim hargaSatuan As String = dgvDaftarMakeup.Rows(indeks).Cells(4).Value
                 dgvKeranjang.Rows.Add("", namaMakeup, merkMakeup, jenisMakeup, hargaSatuan, "1", hargaSatuan)
+
             Next
         Else
             MessageBox.Show("Silahkan Pilih Menu Yang Tersedia!!!", "Warning")
@@ -153,7 +159,7 @@ Public Class mainUser
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Me.Hide()
-        Form1.ShowDialog()
+        Form1.Show()
     End Sub
 
 End Class

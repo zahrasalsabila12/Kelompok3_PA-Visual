@@ -33,6 +33,7 @@ Partial Class Form1
         '
         'txtUser
         '
+        Me.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtUser.Font = New System.Drawing.Font("Yu Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUser.Location = New System.Drawing.Point(490, 200)
         Me.txtUser.Name = "txtUser"
@@ -41,6 +42,7 @@ Partial Class Form1
         '
         'txtPass
         '
+        Me.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtPass.Font = New System.Drawing.Font("Yu Gothic", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.Location = New System.Drawing.Point(490, 277)
         Me.txtPass.Name = "txtPass"
@@ -49,6 +51,7 @@ Partial Class Form1
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -62,6 +65,7 @@ Partial Class Form1
         '
         'btnLogin
         '
+        Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.btnLogin.BackColor = System.Drawing.Color.RosyBrown
         Me.btnLogin.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText
@@ -74,6 +78,7 @@ Partial Class Form1
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -87,6 +92,7 @@ Partial Class Form1
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -98,6 +104,7 @@ Partial Class Form1
         '
         'LinkLabel1
         '
+        Me.LinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Location = New System.Drawing.Point(663, 428)
@@ -115,6 +122,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.Login1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(888, 558)
+        Me.ControlBox = False
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
@@ -125,6 +133,7 @@ Partial Class Form1
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Yu Gothic", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()

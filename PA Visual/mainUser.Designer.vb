@@ -36,6 +36,7 @@ Partial Class mainUser
         Me.btnCheckout = New System.Windows.Forms.Button()
         Me.dgvKeranjang = New System.Windows.Forms.DataGridView()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnHapus = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvDaftarSkincare, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -53,7 +54,7 @@ Partial Class mainUser
         Me.Label1.Location = New System.Drawing.Point(13, 180)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(78, 15)
+        Me.Label1.Size = New System.Drawing.Size(97, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "No. Pesanan"
         '
@@ -64,7 +65,7 @@ Partial Class mainUser
         Me.TextBox1.Location = New System.Drawing.Point(141, 172)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(276, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(276, 32)
         Me.TextBox1.TabIndex = 1
         '
         'GroupBox1
@@ -146,6 +147,7 @@ Partial Class mainUser
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.SeaShell
+        Me.GroupBox3.Controls.Add(Me.btnHapus)
         Me.GroupBox3.Controls.Add(Me.txtTotalPesanan)
         Me.GroupBox3.Controls.Add(Me.Label2)
         Me.GroupBox3.Controls.Add(Me.btnCheckout)
@@ -167,7 +169,7 @@ Partial Class mainUser
         Me.txtTotalPesanan.Location = New System.Drawing.Point(872, 64)
         Me.txtTotalPesanan.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalPesanan.Name = "txtTotalPesanan"
-        Me.txtTotalPesanan.Size = New System.Drawing.Size(276, 27)
+        Me.txtTotalPesanan.Size = New System.Drawing.Size(276, 32)
         Me.txtTotalPesanan.TabIndex = 4
         '
         'Label2
@@ -179,7 +181,7 @@ Partial Class mainUser
         Me.Label2.Location = New System.Drawing.Point(869, 45)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 15)
+        Me.Label2.Size = New System.Drawing.Size(108, 18)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Total Pesanan"
         '
@@ -188,9 +190,9 @@ Partial Class mainUser
         Me.btnCheckout.BackColor = System.Drawing.Color.RosyBrown
         Me.btnCheckout.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCheckout.ForeColor = System.Drawing.Color.SeaShell
-        Me.btnCheckout.Location = New System.Drawing.Point(944, 114)
+        Me.btnCheckout.Location = New System.Drawing.Point(1035, 124)
         Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(151, 48)
+        Me.btnCheckout.Size = New System.Drawing.Size(113, 48)
         Me.btnCheckout.TabIndex = 2
         Me.btnCheckout.Text = "CHECKOUT >>"
         Me.btnCheckout.UseVisualStyleBackColor = False
@@ -218,13 +220,25 @@ Partial Class mainUser
         Me.btnLogout.Text = "LOG OUT"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
+        'btnHapus
+        '
+        Me.btnHapus.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnHapus.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHapus.ForeColor = System.Drawing.Color.SeaShell
+        Me.btnHapus.Location = New System.Drawing.Point(872, 124)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(88, 48)
+        Me.btnHapus.TabIndex = 5
+        Me.btnHapus.Text = "Hapus"
+        Me.btnHapus.UseVisualStyleBackColor = False
+        '
         'mainUser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.mainUser
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1370, 733)
+        Me.ClientSize = New System.Drawing.Size(1430, 733)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -263,4 +277,5 @@ Partial Class mainUser
     Friend WithEvents btnCheckout As Button
     Friend WithEvents dgvKeranjang As DataGridView
     Friend WithEvents btnLogout As Button
+    Friend WithEvents btnHapus As Button
 End Class
