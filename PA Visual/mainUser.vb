@@ -2,6 +2,19 @@
 Imports Mysqlx.Resultset
 
 Public Class mainUser
+    Private Sub UpdateTotalPembayaranKonfirmasi()
+        If konfirmasi.dgvKeranjang IsNot Nothing Then
+            Dim totalPembayaran As Double = 0
+            Dim indeks As Integer
+            While (indeks <= konfirmasi.dgvKeranjang.Rows.Count - 1)
+                totalPembayaran = totalPembayaran + konfirmasi.dgvKeranjang.Rows(indeks).Cells(6).Value
+                indeks = indeks + 1
+            End While
+            konfirmasi.lblharga.Text = totalPembayaran
+        Else
+            konfirmasi.lblharga.Text = 0
+        End If
+    End Sub
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
         Dim dt2 As New DataTable
         dt2.Columns.Add("NO")
@@ -18,6 +31,7 @@ Public Class mainUser
         konfirmasi.Show()
         konfirmasi.dgvKeranjang.DataSource = dt2
         Penomoran(konfirmasi.dgvKeranjang)
+        UpdateTotalPembayaranKonfirmasi()
         konfirmasi.dgvKeranjang.Columns(0).Width = 60
         konfirmasi.dgvKeranjang.Columns(1).Width = 200
         konfirmasi.dgvKeranjang.Columns(2).Width = 125
@@ -87,12 +101,12 @@ Public Class mainUser
 
         dgvKeranjang.ColumnCount = 7
         dgvKeranjang.Columns(0).Width = 50
-        dgvKeranjang.Columns(1).Width = 140
+        dgvKeranjang.Columns(1).Width = 150
         dgvKeranjang.Columns(2).Width = 140
         dgvKeranjang.Columns(3).Width = 110
-        dgvKeranjang.Columns(4).Width = 100
-        dgvKeranjang.Columns(5).Width = 110
-        dgvKeranjang.Columns(6).Width = 115
+        dgvKeranjang.Columns(4).Width = 120
+        dgvKeranjang.Columns(5).Width = 120
+        dgvKeranjang.Columns(6).Width = 125
         dgvKeranjang.Columns(0).HeaderText = "NO"
         dgvKeranjang.Columns(1).HeaderText = "NAMA"
         dgvKeranjang.Columns(2).HeaderText = "MERK"

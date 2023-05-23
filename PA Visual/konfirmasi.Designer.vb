@@ -30,8 +30,11 @@ Partial Class konfirmasi
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgvKeranjang = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnCheckout = New System.Windows.Forms.Button()
+        Me.lblharga = New System.Windows.Forms.Label()
+        Me.Rp = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvKeranjang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -112,31 +115,67 @@ Partial Class konfirmasi
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Silahkan periksa kembali barang belanjaan anda ;)"
         '
-        'Button1
+        'btnBack
         '
-        Me.Button1.BackColor = System.Drawing.Color.RosyBrown
-        Me.Button1.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button1.Location = New System.Drawing.Point(513, 339)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(185, 48)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Kembali untuk mengubah"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnBack.BackColor = System.Drawing.Color.RosyBrown
+        Me.btnBack.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnBack.Location = New System.Drawing.Point(513, 339)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(185, 48)
+        Me.btnBack.TabIndex = 4
+        Me.btnBack.Text = "Kembali untuk mengubah"
+        Me.btnBack.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnCheckout
         '
-        Me.Button2.BackColor = System.Drawing.Color.IndianRed
-        Me.Button2.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Button2.Location = New System.Drawing.Point(818, 339)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(185, 48)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Checkout"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnCheckout.BackColor = System.Drawing.Color.IndianRed
+        Me.btnCheckout.Font = New System.Drawing.Font("Arial", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheckout.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnCheckout.Location = New System.Drawing.Point(818, 339)
+        Me.btnCheckout.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCheckout.Name = "btnCheckout"
+        Me.btnCheckout.Size = New System.Drawing.Size(185, 48)
+        Me.btnCheckout.TabIndex = 5
+        Me.btnCheckout.Text = "Checkout"
+        Me.btnCheckout.UseVisualStyleBackColor = False
+        '
+        'lblharga
+        '
+        Me.lblharga.AutoSize = True
+        Me.lblharga.BackColor = System.Drawing.Color.Transparent
+        Me.lblharga.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblharga.ForeColor = System.Drawing.Color.Black
+        Me.lblharga.Location = New System.Drawing.Point(310, 344)
+        Me.lblharga.Name = "lblharga"
+        Me.lblharga.Size = New System.Drawing.Size(61, 29)
+        Me.lblharga.TabIndex = 14
+        Me.lblharga.Text = "........"
+        '
+        'Rp
+        '
+        Me.Rp.AutoSize = True
+        Me.Rp.BackColor = System.Drawing.Color.Transparent
+        Me.Rp.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Rp.ForeColor = System.Drawing.Color.Black
+        Me.Rp.Location = New System.Drawing.Point(267, 344)
+        Me.Rp.Name = "Rp"
+        Me.Rp.Size = New System.Drawing.Size(50, 29)
+        Me.Rp.TabIndex = 13
+        Me.Rp.Text = "Rp."
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(22, 344)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(248, 29)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "TOTAL BELANJAAN :"
         '
         'konfirmasi
         '
@@ -145,8 +184,11 @@ Partial Class konfirmasi
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.konfirmasi
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1333, 425)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lblharga)
+        Me.Controls.Add(Me.Rp)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.btnCheckout)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
         Me.DoubleBuffered = True
@@ -163,7 +205,10 @@ Partial Class konfirmasi
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnBack As Button
+    Friend WithEvents btnCheckout As Button
     Friend WithEvents dgvKeranjang As DataGridView
+    Friend WithEvents lblharga As Label
+    Friend WithEvents Rp As Label
+    Friend WithEvents Label2 As Label
 End Class
