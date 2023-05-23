@@ -10,7 +10,7 @@ Public Class Form1
 
         ElseIf txtUser.Text = "admin" And txtPass.Text = "admin123" Then
             Me.Visible = False
-            Admin.ShowDialog()
+            MenuAdmin.ShowDialog()
         Else
             CMD = New MySqlCommand("Select * From tbakun where usename= @username and password= @password", CONN)
             CMD.Parameters.AddWithValue("username", username)

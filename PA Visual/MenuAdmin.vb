@@ -1,9 +1,8 @@
-﻿Imports MySql.Data.MySqlClient
+﻿
+Imports MySql.Data.MySqlClient
 
-Public Class Admin
-    Dim arrImg() As Byte
-
-    Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+Public Class MenuAdmin
+    Private Sub MenuAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Connect()
         Call DisplayMakeup()
         Call DisplaySkincare()
@@ -11,6 +10,7 @@ Public Class Admin
         dgvSkinCare.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         dgvMakeUp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
     End Sub
+
     Sub Clean()
         txtID.Clear()
         txtID.ReadOnly = False
@@ -222,7 +222,7 @@ Public Class Admin
     Private Sub btnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
         Call Clean()
     End Sub
-
+    'button Hapus
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
         If (txtID.Text = "") Then
             MsgBox("Silahkan pilih data yang ingin Anda hapus sesuai dengan tabel data")
@@ -267,9 +267,29 @@ Public Class Admin
             End If
         End If
     End Sub
-
+    'button keluar
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
         Me.Close()
         Form1.ShowDialog()
+    End Sub
+    'button cari
+    Private Sub btnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click
+        CMD = New MySqlCommand("Select * From dbblossom where nama like '%" & txtCari.Text & "%'", CONN)
+        RD = CMD.ExecuteReader
+        RD.Read()
+
+        If RD.HasRows Then
+            RD.Close()
+            DA = New MySqlDataAdapter("Select * From dbblossom where nama like '%" & txtCari.Text & "%'", CONN)
+            DS = New DataSet
+            DA.Fill(DS, "kosmetik")
+            dgvSkinCare.DataSource = DS.Tables("kosmetik")
+            dgvSkinCare.ReadOnly = True
+            dgvMakeUp.DataSource = DS.Tables("kosmetik")
+            dgvMakeUp.ReadOnly = True
+        Else
+            RD.Close()
+            MsgBox("Data yang Anda cari tidak ditemukan")
+        End If
     End Sub
 End Class

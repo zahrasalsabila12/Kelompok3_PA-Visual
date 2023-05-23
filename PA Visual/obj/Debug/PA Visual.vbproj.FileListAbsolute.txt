@@ -94,3 +94,15 @@ D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Deb
 D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.xml
 D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.pdb
 >>>>>>> 15052e1a9ea5e590e68670e8869307d7032c169b
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\Google.Protobuf.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\ZstdNet.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\BouncyCastle.Crypto.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\System.Memory.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\System.Buffers.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\K4os.Compression.LZ4.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\K4os.Hash.xxHash.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\System.Numerics.Vectors.dll
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\bin\Debug\mysql.data.xml
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.exe.config
+E:\Kuliahhh\semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.MenuAdmin.resources
