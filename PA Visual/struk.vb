@@ -11,21 +11,26 @@ Public Class struk
         dgvStruk.Refresh()
     End Sub
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Me.Close()
-        mainUser.ShowDialog()
+        Me.Visible = False
+        mainUser.Show()
     End Sub
 
     Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
         Dim screenBounds As Rectangle = Screen.PrimaryScreen.Bounds
         Dim numScreenshots As Integer = 1
-
         For i As Integer = 1 To numScreenshots
             Dim screenshot As New Bitmap(screenBounds.Width, screenBounds.Height, PixelFormat.Format32bppArgb)
             Using g As Graphics = Graphics.FromImage(screenshot)
                 g.CopyFromScreen(screenBounds.Location, Point.Empty, screenBounds.Size)
             End Using
-            Dim filename As String = "D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\Screenshot struk\Struk_" & i.ToString() & ".png"
-            screenshot.Save(filename, ImageFormat.Png)
+            Dim saveFileDialog As New SaveFileDialog()
+            saveFileDialog.Filter = "PNG Files (*.png)|*.png"
+            saveFileDialog.FileName = "Struk_" & i.ToString()
+
+            If saveFileDialog.ShowDialog() = DialogResult.OK Then
+                screenshot.Save(saveFileDialog.FileName, ImageFormat.Png)
+            End If
+
             screenshot.Dispose()
         Next i
     End Sub
