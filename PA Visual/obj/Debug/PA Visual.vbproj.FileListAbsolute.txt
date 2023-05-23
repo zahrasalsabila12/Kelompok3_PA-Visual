@@ -77,3 +77,4 @@ C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.exe
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.xml
 C:\Users\user\source\repos\PROJEK AKHIR\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA Visual.pdb
+D:\Semester 4\Praktikum Pemrograman Visual\Kelompok3_PA-Visual\PA Visual\obj\Debug\PA_Visual.MenuAdmin.resources

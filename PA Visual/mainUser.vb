@@ -1,8 +1,30 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Mysqlx.Resultset
 
 Public Class mainUser
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
-        konfirmasi.ShowDialog()
+        Dim dt2 As New DataTable
+        dt2.Columns.Add("NO")
+        dt2.Columns.Add("NAMA")
+        dt2.Columns.Add("MERK")
+        dt2.Columns.Add("JENIS")
+        dt2.Columns.Add("HARGA SATUAN")
+        dt2.Columns.Add("JUMLAH BARANG")
+        dt2.Columns.Add("TOTAL")
+        For Each row As DataGridViewRow In dgvKeranjang.Rows
+            dt2.Rows.Add(row.Cells(0).Value, row.Cells(1).Value, row.Cells(2).Value, row.Cells(3).Value, row.Cells(4).Value, row.Cells(5).Value, row.Cells(6).Value)
+        Next
+        Me.Visible = False
+        konfirmasi.Show()
+        konfirmasi.dgvKeranjang.DataSource = dt2
+        Penomoran(konfirmasi.dgvKeranjang)
+        konfirmasi.dgvKeranjang.Columns(0).Width = 60
+        konfirmasi.dgvKeranjang.Columns(1).Width = 200
+        konfirmasi.dgvKeranjang.Columns(2).Width = 125
+        konfirmasi.dgvKeranjang.Columns(3).Width = 185
+        konfirmasi.dgvKeranjang.Columns(4).Width = 200
+        konfirmasi.dgvKeranjang.Columns(5).Width = 150
+        konfirmasi.dgvKeranjang.Columns(6).Width = 150
     End Sub
 
     Sub displayMakeup()

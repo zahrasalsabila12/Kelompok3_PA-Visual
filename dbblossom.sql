@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2023 at 05:49 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.1
+-- Generation Time: May 23, 2023 at 06:27 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,10 +28,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbakun` (
-  `id` text NOT NULL,
-  `usename` text NOT NULL,
+  `id` int(10) NOT NULL,
+  `username` text NOT NULL,
   `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbakun`
+--
+
+INSERT INTO `tbakun` (`id`, `username`, `password`) VALUES
+(1, 'irvan', 'irvan123'),
+(2, 'user1', '123');
 
 -- --------------------------------------------------------
 
@@ -47,6 +55,15 @@ CREATE TABLE `tbmakeup` (
   `harga` int(50) NOT NULL,
   `stok` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbmakeup`
+--
+
+INSERT INTO `tbmakeup` (`id`, `nama`, `merk`, `jenis`, `harga`, `stok`) VALUES
+('1', 'Bedak', 'Samsul', 'Make Up', 2000, 10),
+('2', '2', '2', 'Make Up', 2, 2),
+('3', 'Lipstick Merah', 'Wardah', 'Make Up', 100000, -1);
 
 -- --------------------------------------------------------
 
@@ -64,6 +81,14 @@ CREATE TABLE `tbskincare` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `tbskincare`
+--
+
+INSERT INTO `tbskincare` (`id`, `nama`, `merk`, `jenis`, `harga`, `stok`) VALUES
+('1', 'Sabun', 'Kiyowo', 'Skin Care', 1000, 10),
+('2', 'Masker Jeruk', 'Orange', 'Skin Care', -1, 5);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -71,7 +96,7 @@ CREATE TABLE `tbskincare` (
 -- Indexes for table `tbakun`
 --
 ALTER TABLE `tbakun`
-  ADD PRIMARY KEY (`id`(50));
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbmakeup`
@@ -84,6 +109,16 @@ ALTER TABLE `tbmakeup`
 --
 ALTER TABLE `tbskincare`
   ADD PRIMARY KEY (`id`(50));
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbakun`
+--
+ALTER TABLE `tbakun`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
