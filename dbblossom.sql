@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2023 at 06:27 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: May 23, 2023 at 10:57 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,6 +44,30 @@ INSERT INTO `tbakun` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbkeranjang`
+--
+
+CREATE TABLE `tbkeranjang` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `merk` varchar(50) NOT NULL,
+  `jenis` varchar(50) NOT NULL,
+  `harga_satuan` int(11) NOT NULL,
+  `jumlah_barang` int(11) NOT NULL,
+  `total` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbkeranjang`
+--
+
+INSERT INTO `tbkeranjang` (`id`, `nama`, `merk`, `jenis`, `harga_satuan`, `jumlah_barang`, `total`) VALUES
+(1, 'Lipstick Merah', 'Wardah', 'Make Up', 100000, 10, 100000),
+(2, 'Sabun', 'Kiyowo', 'Skin Care', 1000, 10, 1000);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbmakeup`
 --
 
@@ -61,9 +85,9 @@ CREATE TABLE `tbmakeup` (
 --
 
 INSERT INTO `tbmakeup` (`id`, `nama`, `merk`, `jenis`, `harga`, `stok`) VALUES
-('1', 'Bedak', 'Samsul', 'Make Up', 2000, 10),
-('2', '2', '2', 'Make Up', 2, 2),
-('3', 'Lipstick Merah', 'Wardah', 'Make Up', 100000, -1);
+('1', 'Bedak', 'Samsul', 'Make Up', 2000, 15),
+('2', '2', '2', 'Make Up', 2, 15),
+('3', 'Lipstick Merah', 'Wardah', 'Make Up', 100000, 15);
 
 -- --------------------------------------------------------
 
@@ -85,8 +109,8 @@ CREATE TABLE `tbskincare` (
 --
 
 INSERT INTO `tbskincare` (`id`, `nama`, `merk`, `jenis`, `harga`, `stok`) VALUES
-('1', 'Sabun', 'Kiyowo', 'Skin Care', 1000, 10),
-('2', 'Masker Jeruk', 'Orange', 'Skin Care', -1, 5);
+('1', 'Sabun', 'Kiyowo', 'Skin Care', 1000, 15),
+('2', 'Masker Jeruk', 'Orange', 'Skin Care', -1, 15);
 
 --
 -- Indexes for dumped tables
@@ -96,6 +120,12 @@ INSERT INTO `tbskincare` (`id`, `nama`, `merk`, `jenis`, `harga`, `stok`) VALUES
 -- Indexes for table `tbakun`
 --
 ALTER TABLE `tbakun`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbkeranjang`
+--
+ALTER TABLE `tbkeranjang`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -119,6 +149,12 @@ ALTER TABLE `tbskincare`
 --
 ALTER TABLE `tbakun`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tbkeranjang`
+--
+ALTER TABLE `tbkeranjang`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
