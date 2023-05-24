@@ -1,6 +1,10 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Form1
+    Sub clean()
+        txtUser.Clear()
+        txtPass.Clear()
+    End Sub
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtUser.Text.Trim()
         Dim password As String = txtPass.Text.Trim()
@@ -10,6 +14,7 @@ Public Class Form1
 
         ElseIf txtUser.Text = "admin" And txtPass.Text = "admin123" Then
             Me.Visible = False
+            Call clean()
             MenuAdmin.Show()
         Else
             CMD = New MySqlCommand("Select * From tbakun where username= @username and password= @password", CONN)
@@ -19,6 +24,7 @@ Public Class Form1
             If RD.Read Then
                 MessageBox.Show("Login berhasil.")
                 Me.Visible = False
+                Call clean()
                 homeUser.ShowDialog()
             Else
                 MessageBox.Show("Username atau password salah.")
@@ -32,6 +38,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call clean()
         Call Connect()
     End Sub
 End Class
