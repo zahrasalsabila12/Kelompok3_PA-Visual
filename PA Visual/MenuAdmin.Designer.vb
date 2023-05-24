@@ -134,6 +134,7 @@ Partial Class MenuAdmin
         '
         Me.cbJenis.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbJenis.FormattingEnabled = True
+        Me.cbJenis.Items.AddRange(New Object() {"Skin Care", "Make Up"})
         Me.cbJenis.Location = New System.Drawing.Point(15, 307)
         Me.cbJenis.Name = "cbJenis"
         Me.cbJenis.Size = New System.Drawing.Size(319, 24)
