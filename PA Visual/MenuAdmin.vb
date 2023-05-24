@@ -119,13 +119,13 @@ Public Class MenuAdmin
     'ubah data skicare
     Sub updateSC()
         Try
-            CMD = New MySqlCommand("Select * From tbskincare where id='" & Convert.ToInt32(dgvSkinCare.SelectedCells.Item(0).Value.ToString) & "'", CONN)
+            CMD = New MySqlCommand("Select * From tbskincare where nama='" & txtNama.Text & "'", CONN)
             RD = CMD.ExecuteReader
             RD.Read()
 
             If RD.HasRows Then
                 RD.Close()
-                CMD = New MySqlCommand("Update tbskincare merk='" & txtMerk.Text & "', jenis='" & cbJenis.Text & "', harga='" & txtHarga.Text & "', stok='" & txtStok.Text & "' where id='" & Convert.ToInt32(dgvSkinCare.SelectedCells.Item(0).Value.ToString) & "'", CONN)
+                CMD = New MySqlCommand("Update tbskincare set merk='" & txtMerk.Text & "', jenis='" & cbJenis.Text & "', harga='" & txtHarga.Text & "', stok='" & txtStok.Text & "' where nama='" & txtNama.Text & "'", CONN)
                 CMD.ExecuteNonQuery()
                 MessageBox.Show("Data berhasil diubah", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
@@ -142,13 +142,13 @@ Public Class MenuAdmin
     'ubah data make up
     Sub updateMU()
         Try
-            CMD = New MySqlCommand("Select * From tbmakeup where id='" & Convert.ToInt32(dgvMakeUp.SelectedCells.Item(0).Value.ToString) & "'", CONN)
+            CMD = New MySqlCommand("Select * From tbmakeup where nama='" & txtNama.Text & "'", CONN)
             RD = CMD.ExecuteReader
             RD.Read()
 
             If RD.HasRows Then
                 RD.Close()
-                CMD = New MySqlCommand("Update tbmakeup set merk='" & txtMerk.Text & "', jenis='" & cbJenis.Text & "', harga='" & txtHarga.Text & "', stok='" & txtStok.Text & "' where id='" & Convert.ToInt32(dgvMakeUp.SelectedCells.Item(0).Value.ToString) & "'", CONN)
+                CMD = New MySqlCommand("Update tbmakeup set merk='" & txtMerk.Text & "', jenis='" & cbJenis.Text & "', harga='" & txtHarga.Text & "', stok='" & txtStok.Text & "' where nama='" & txtNama.Text & "'", CONN)
                 CMD.ExecuteNonQuery()
                 MessageBox.Show("Data berhasil diubah", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
@@ -280,7 +280,7 @@ Public Class MenuAdmin
         Else
             If cbJenis.Text = "Skin Care" Then
                 If MessageBox.Show("Anda yakin ingin menghapus data skin care?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                    CMD = New MySqlCommand("Delete From tbskincare where id='" & Convert.ToInt32(dgvSkinCare.SelectedCells.Item(0).Value.ToString) & "'", CONN)
+                    CMD = New MySqlCommand("Delete From tbskincare where nama='" & txtNama.Text & "'", CONN)
                     CMD.ExecuteNonQuery()
                     Call Clean()
                     Call DisplaySkincare()
@@ -289,7 +289,7 @@ Public Class MenuAdmin
                 End If
             ElseIf cbJenis.Text = "Make Up" Then
                 If MessageBox.Show("Anda yakin ingin menghapus data make up?", "", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                    CMD = New MySqlCommand("Delete From tbmakeup where id='" & Convert.ToInt32(dgvMakeUp.SelectedCells.Item(0).Value.ToString) & "'", CONN)
+                    CMD = New MySqlCommand("Delete From tbmakeup where nama='" & txtNama.Text & "'", CONN)
                     CMD.ExecuteNonQuery()
                     Call Clean()
                     Call DisplayMakeup()
