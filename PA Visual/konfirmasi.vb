@@ -38,6 +38,16 @@ Public Class konfirmasi
             updateCommandSkincare.ExecuteNonQuery()
         Next
         CONN.Close()
+        Dim NomorPesanan As Integer = Val(Microsoft.VisualBasic.Left(mainUser.txtNoPesanan.Text, 3)) + 1
+        If NomorPesanan < 10 Then
+            mainUser.txtNoPesanan.Text = "00" + NomorPesanan.ToString + "/SMD/2023"
+        ElseIf NomorPesanan >= 10 And NomorPesanan < 100 Then
+            mainUser.txtNoPesanan.Text = "0" + NomorPesanan.ToString + "/SMD/2023"
+        Else
+            mainUser.txtNoPesanan.Text = NomorPesanan.ToString + "/SMD/2023"
+        End If
+        Call mainUser.displayMakeup()
+        Call mainUser.displaySkincare()
         mainUser.dgvDaftarMakeup.Refresh()
         mainUser.dgvDaftarSkincare.Refresh()
         MessageBox.Show("Pesanan telah berhasil")

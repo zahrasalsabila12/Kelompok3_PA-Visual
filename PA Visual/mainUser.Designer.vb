@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class mainUser
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,8 @@ Partial Class mainUser
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnTambahSkincare = New System.Windows.Forms.Button()
         Me.dgvDaftarSkincare = New System.Windows.Forms.DataGridView()
@@ -37,6 +35,8 @@ Partial Class mainUser
         Me.btnCheckout = New System.Windows.Forms.Button()
         Me.dgvKeranjang = New System.Windows.Forms.DataGridView()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtNoPesanan = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvDaftarSkincare, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -44,29 +44,6 @@ Partial Class mainUser
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvKeranjang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.Label1.Location = New System.Drawing.Point(13, 180)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "No. Pesanan"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.SeaShell
-        Me.TextBox1.Font = New System.Drawing.Font("Yu Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(141, 172)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(276, 32)
-        Me.TextBox1.TabIndex = 1
         '
         'GroupBox1
         '
@@ -243,6 +220,31 @@ Partial Class mainUser
         Me.btnLogout.Text = "LOG OUT"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Label1.Location = New System.Drawing.Point(13, 180)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(97, 18)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "No. Pesanan"
+        '
+        'txtNoPesanan
+        '
+        Me.txtNoPesanan.BackColor = System.Drawing.Color.SeaShell
+        Me.txtNoPesanan.Font = New System.Drawing.Font("Yu Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNoPesanan.Location = New System.Drawing.Point(141, 172)
+        Me.txtNoPesanan.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNoPesanan.Name = "txtNoPesanan"
+        Me.txtNoPesanan.ReadOnly = True
+        Me.txtNoPesanan.Size = New System.Drawing.Size(276, 32)
+        Me.txtNoPesanan.TabIndex = 1
+        Me.txtNoPesanan.Text = "001/SMD/2023"
+        '
         'mainUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
@@ -254,7 +256,7 @@ Partial Class mainUser
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNoPesanan)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -273,9 +275,6 @@ Partial Class mainUser
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnTambahSkincare As Button
     Friend WithEvents dgvDaftarSkincare As DataGridView
@@ -289,4 +288,6 @@ Partial Class mainUser
     Friend WithEvents dgvKeranjang As DataGridView
     Friend WithEvents btnLogout As Button
     Friend WithEvents btnHapus As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtNoPesanan As TextBox
 End Class
