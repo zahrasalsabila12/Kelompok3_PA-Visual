@@ -166,7 +166,7 @@ Partial Class mainUser
         Me.txtTotalPesanan.Location = New System.Drawing.Point(872, 64)
         Me.txtTotalPesanan.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalPesanan.Name = "txtTotalPesanan"
-        Me.txtTotalPesanan.Size = New System.Drawing.Size(276, 32)
+        Me.txtTotalPesanan.Size = New System.Drawing.Size(276, 27)
         Me.txtTotalPesanan.TabIndex = 4
         '
         'Label2
@@ -178,7 +178,7 @@ Partial Class mainUser
         Me.Label2.Location = New System.Drawing.Point(869, 45)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 18)
+        Me.Label2.Size = New System.Drawing.Size(87, 15)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Total Pesanan"
         '
@@ -229,7 +229,7 @@ Partial Class mainUser
         Me.Label1.Location = New System.Drawing.Point(13, 180)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 18)
+        Me.Label1.Size = New System.Drawing.Size(78, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "No. Pesanan"
         '
@@ -241,13 +241,13 @@ Partial Class mainUser
         Me.txtNoPesanan.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNoPesanan.Name = "txtNoPesanan"
         Me.txtNoPesanan.ReadOnly = True
-        Me.txtNoPesanan.Size = New System.Drawing.Size(276, 32)
+        Me.txtNoPesanan.Size = New System.Drawing.Size(276, 27)
         Me.txtNoPesanan.TabIndex = 1
         Me.txtNoPesanan.Text = "001/SMD/2023"
         '
         'mainUser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.mainUser
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch

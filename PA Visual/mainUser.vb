@@ -27,6 +27,7 @@ Public Class mainUser
         For Each row As DataGridViewRow In dgvKeranjang.Rows
             dt2.Rows.Add(row.Cells(0).Value, row.Cells(1).Value, row.Cells(2).Value, row.Cells(3).Value, row.Cells(4).Value, row.Cells(5).Value, row.Cells(6).Value)
         Next
+        konfirmasi.txtNoPesanan.Text = txtNoPesanan.Text
         Me.Visible = False
         konfirmasi.Show()
         konfirmasi.dgvKeranjang.DataSource = dt2
@@ -237,5 +238,9 @@ Public Class mainUser
             Penomoran(dgvKeranjang)
             UpdateTotalPembayaran()
         End If
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

@@ -34,6 +34,8 @@ Partial Class struk
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Rp = New System.Windows.Forms.Label()
         Me.lblharga = New System.Windows.Forms.Label()
+        Me.txtNoPesanan = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.dgvStruk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -152,6 +154,30 @@ Partial Class struk
         Me.lblharga.TabIndex = 11
         Me.lblharga.Text = "........"
         '
+        'txtNoPesanan
+        '
+        Me.txtNoPesanan.BackColor = System.Drawing.Color.SeaShell
+        Me.txtNoPesanan.Font = New System.Drawing.Font("Yu Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNoPesanan.Location = New System.Drawing.Point(1022, 101)
+        Me.txtNoPesanan.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNoPesanan.Name = "txtNoPesanan"
+        Me.txtNoPesanan.ReadOnly = True
+        Me.txtNoPesanan.Size = New System.Drawing.Size(276, 27)
+        Me.txtNoPesanan.TabIndex = 18
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.Label3.Location = New System.Drawing.Point(894, 109)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 15)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "No. Pesanan"
+        '
         'struk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -159,6 +185,8 @@ Partial Class struk
         Me.BackgroundImage = Global.PA_Visual.My.Resources.Resources.struk
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.Controls.Add(Me.txtNoPesanan)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblharga)
         Me.Controls.Add(Me.Rp)
         Me.Controls.Add(Me.Label1)
@@ -182,4 +210,6 @@ Partial Class struk
     Friend WithEvents Label1 As Label
     Friend WithEvents Rp As Label
     Friend WithEvents lblharga As Label
+    Friend WithEvents txtNoPesanan As TextBox
+    Friend WithEvents Label3 As Label
 End Class

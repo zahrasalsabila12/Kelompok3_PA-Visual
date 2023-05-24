@@ -60,6 +60,7 @@ Public Class struk
         Me.WindowState = FormWindowState.Maximized
         Call Connect()
         Call displayStruk()
+        txtNoPesanan.Text = konfirmasi.txtNoPesanan.Text
         If dgvStruk.ColumnCount >= 7 Then
             dgvStruk.Columns(0).Width = 50
             dgvStruk.Columns(1).Width = 150
