@@ -164,26 +164,42 @@ Public Class MenuAdmin
     End Sub
     'button menambahkan data
     Private Sub btnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
+        Dim number As Integer
         If (cbJenis.Text = "") Then
             MsgBox("Data belum lengkap")
             cbJenis.Focus()
         ElseIf (txtNama.Text = "") Then
             MsgBox("Data belum lengkap")
             txtNama.Focus()
+        ElseIf (Integer.TryParse(txtNama.Text, number)) Then
+            MsgBox("Inputan nama harus dalam abjad")
+            txtNama.Focus()
         ElseIf (txtMerk.Text = "") Then
             MsgBox("Data belum lengkap")
+            txtMerk.Focus()
+        ElseIf (Integer.TryParse(txtMerk.Text, number)) Then
+            MsgBox("Inputan merk harus dalam abjad")
             txtMerk.Focus()
         ElseIf (cbJenis.Text = "") Then
             MsgBox("Data belum lengkap")
             cbJenis.Focus()
+        ElseIf (Integer.TryParse(cbJenis.Text, number)) Then
+            MsgBox("Inputan jenis harus sesuai dengan pilihan yang ada")
+            cbJenis.Focus()
         ElseIf (txtHarga.Text = "") Then
             MsgBox("Data belum lengkap")
+            txtHarga.Focus()
+        ElseIf (Not Integer.TryParse(txtHarga.Text, number)) Then
+            MsgBox("Inputan harga harus dalam angka")
             txtHarga.Focus()
         ElseIf (Convert.ToInt32(txtHarga.Text) < 0) Then
             MsgBox("Data harga harus bernilai positif")
             txtHarga.Focus()
         ElseIf (txtStok.Text = "") Then
             MsgBox("Data belum lengkap")
+            txtStok.Focus()
+        ElseIf (Not Integer.TryParse(txtStok.Text, number)) Then
+            MsgBox("Inputan stok harus dalam angka")
             txtStok.Focus()
         ElseIf (Convert.ToInt32(txtStok.Text) <= 0) Then
             MsgBox("Data stok harus bernilai positif")
@@ -217,20 +233,33 @@ Public Class MenuAdmin
     End Sub
     'button mengubah data
     Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
+        Dim number As Integer
         If (cbJenis.Text = "") Then
             MsgBox("Data belum lengkap")
             cbJenis.Focus()
         ElseIf (txtNama.Text = "") Then
             MsgBox("Data belum lengkap")
             txtNama.Focus()
+        ElseIf (Integer.TryParse(txtNama.Text, number)) Then
+            MsgBox("Inputan nama harus dalam abjad")
+            txtNama.Focus()
         ElseIf (txtMerk.Text = "") Then
             MsgBox("Data belum lengkap")
+            txtMerk.Focus()
+        ElseIf (Integer.TryParse(txtMerk.Text, number)) Then
+            MsgBox("Inputan merk harus dalam abjad")
             txtMerk.Focus()
         ElseIf (cbJenis.Text = "") Then
             MsgBox("Data belum lengkap")
             cbJenis.Focus()
+        ElseIf (Integer.TryParse(cbJenis.Text, number)) Then
+            MsgBox("Inputan jenis harus sesuai dengan pilihan yang ada")
+            cbJenis.Focus()
         ElseIf (txtHarga.Text = "") Then
             MsgBox("Data belum lengkap")
+            txtHarga.Focus()
+        ElseIf (Not Integer.TryParse(txtHarga.Text, number)) Then
+            MsgBox("Inputan harga harus dalam angka")
             txtHarga.Focus()
         ElseIf (Convert.ToInt32(txtHarga.Text) < 0) Then
             MsgBox("Data harga harus bernilai positif")
@@ -238,7 +267,10 @@ Public Class MenuAdmin
         ElseIf (txtStok.Text = "") Then
             MsgBox("Data belum lengkap")
             txtStok.Focus()
-        ElseIf (Convert.ToInt32(txtStok.Text) < 0) Then
+        ElseIf (Not Integer.TryParse(txtStok.Text, number)) Then
+            MsgBox("Inputan stok harus dalam angka")
+            txtStok.Focus()
+        ElseIf (Convert.ToInt32(txtStok.Text) <= 0) Then
             MsgBox("Data stok harus bernilai positif")
             txtStok.Focus()
         Else
